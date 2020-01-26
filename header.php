@@ -6,12 +6,12 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
 
-  <title>สื่อแอนิเมชั่น</title>
+  <title>E-learning</title>
   <!-- <link rel="icon" href="./img/movie2.png" /> -->
-  <link rel="shortcut icon" href="img/movie4.png" />
+  <link rel="shortcut icon" href="img/light-bulb.png" />
   <style type="text/css">
     body {
-      background-image: url("img/1217270827.gif");
+      background-image: url("img/69.jpg");
       background-color: #cccc;
       font-family: 'Itim', cursive;
     }

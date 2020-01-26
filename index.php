@@ -48,32 +48,39 @@ if (isset($_SESSION["UserID"])) {
         <?php else: ?>
           <br>
           <div class="col-md-12" style="text-align: center;"> <!-- ใส่วิดีโอตัวอย่าง -->
-            <div class="embed-responsive embed-responsive-16by9">
+            <!-- <div class="embed-responsive embed-responsive-16by9">
              <center>
               <iframe width="560" height="315" src="https://www.youtube.com/embed/IiTjI_Bleu4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </center> 
-            </div>
-            <font color="red">
-              <h4 class="">คำแนะนำ </h4>
-              <h5 style="text-align: left;">
-                <ol class="">
-                  <li>ระบบมีมาตราการเพื่อป้องกันข้อมูลส่วนบุคคล ขอให้ท่านได้ศึกษาและปฏิบัติตามขั้นตอนตามลำดับ</li>
-                  <li>ท่านต้องลงทะเบียนและใช้รหัสผ่านในการเข้าสู่ระบบ</li>
-                  <li>ควรเป็นผู้ทำรายการทุกขั้นตอนด้วยตัวเองและรักษารหัสผ่านเป็นความลับเพื่อป้องกันการแอบอ้างการเข้าสู่ระบบ</li>
-                  <li>ผู้ที่ยังไม่สมัครเป็นสมาชิกให้กดปุ่ม สมัครสมาชิก สำหรับผู้ที่สมัครเป็นสมาชิกให้กดปุ่ม เข้าสู่ระบบ เพื่อทำการ Login เข้าสู่ระบบ</li>
-                </ol>
-              </h5>
-            </font>
+            </center> 
+          </div> -->
+          <font color="red">
+            <h2 class=""><b>Instructions:</b></h2>
+            <h4>
+              
+                
+                <h3><b>In order to protect your personal information, please study & follow these step</b></h3>
+                <br>
+                <li>You must login with a login name & enter a password</li>
+                <li>You must provide true information about yourself</li>
+                <li>You must keep your password confidential to prevent misuse or impersonation</li>
+                <li>To complete login for e-learning, please use Google chrome  Log in </li>
+                <br>
+                <b>* Those who do not subscribe to the press "Register" For those who already subscribe to the press "Log in" to Login</b>
+
+               
+              
+            </h4>
+          </font>
 
 
-          </div>
+        </div>
 
 
-        <?php endif ?>
+      <?php endif ?>
 
-      </div>
     </div>
   </div>
+</div>
 </div>
 <?php include 'footer.php'; ?>
 
