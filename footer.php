@@ -1,11 +1,28 @@
-<br>
-<br>
-<br>
 
 
 
 </body>
 
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+</style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <nav class="navbar navbar-light" style="background-color: #FF9797;">
 	<a class="navbar-brand" href="#" ><br><br></a>
 </nav>

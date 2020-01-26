@@ -82,6 +82,9 @@ if (isset($_SESSION["UserID"])) {
   </div>
 </div>
 </div>
+
+
+
 <?php include 'footer.php'; ?>
 
 
@@ -111,9 +114,9 @@ if (isset($_SESSION["UserID"])) {
     var password = $("#txtNewPassword").val();
     var confirmPassword = $("#txtConfirmPassword").val();
     if (password != confirmPassword)
-      $("#divCheckPasswordMatch").html("รหัสผ่านไม่ตรงกัน!");
+      $("#divCheckPasswordMatch").html("Password Not Match!");
     else
-      $("#divCheckPasswordMatch").html("รหัสผ่านตรงกัน");
+      $("#divCheckPasswordMatch").html("Password Match");
   }
 
           /*
@@ -145,7 +148,7 @@ if (isset($_SESSION["UserID"])) {
     if (password.length < 6) { 
       $('#result').removeClass()
       $('#result').addClass('short')
-      return 'รหัสสั้นเกินไป' 
+      return 'short' 
     }
     
     //length is ok, lets continue.
@@ -172,19 +175,19 @@ if (isset($_SESSION["UserID"])) {
     {
       $('#result').removeClass()
       $('#result').addClass('weak')
-      return 'รหัสง่ายเกินไป'     
+      return 'weak'     
     }
     else if (strength == 2 )
     {
       $('#result').removeClass()
       $('#result').addClass('good')
-      return 'รหัสปลอดภัย'   
+      return 'good'   
     }
     else
     {
       $('#result').removeClass()
       $('#result').addClass('strong')
-      return 'รหัสปลอดภัยมาก'
+      return 'strong'
     }
   }
 });
