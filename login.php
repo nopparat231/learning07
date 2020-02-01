@@ -6,23 +6,23 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">เข้าสู่ระบบ</h5>
+            <h5 class="modal-title">Login</h5>
             <button type="button" class="close" data-dismiss="modal"> <span>×</span> </button>
           </div>
           <div class="modal-body">
             <form id="c_form-h" class="">
-              <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">ชื่อผู้ใช้</label>
+              <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Username</label>
                 <div class="col-10">
                   <input type="text" class="form-control" id="Username" name="Username" placeholder="กรอกชื่อผู้ใช้"> </div>
                 </div>
-                <div class="form-group row"> <label for="inputpasswordh" class="col-2 col-form-label text-nowrap">รหัสผ่าน</label>
+                <div class="form-group row"> <label for="inputpasswordh" class="col-2 col-form-label text-nowrap">Password</label>
                   <div class="col-10">
                     <input type="password" class="form-control" id="Password"  name="Password" placeholder="กรอกรหัสผ่าน"> </div>
                   </div>
                 </form>
               </div>
               <div class="modal-footer"> 
-                <button type="submit" class="btn btn-primary">เข้าสู่ระบบ</button> <button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button> </div>
+                <button type="submit" class="btn btn-primary">Login</button> <button type="button" class="btn btn-danger" data-dismiss="modal">Cansel</button> </div>
               </div>
             </div>
           </div>

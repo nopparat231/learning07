@@ -9,7 +9,7 @@
       <form action="login_db.php" method="post" > 
         <div class="modal-content">
           <div class="modal-header text-center">
-            <h5 class="modal-title">เข้าสู่ระบบ</h5> 
+            <h5 class="modal-title">Login</h5> 
             <button type="button" class="close" data-dismiss="modal"> <span>×</span> </button>
           </div>
 
@@ -25,11 +25,11 @@
                 <div class="col-10">
                   <input type="password" class="form-control" id="inputpasswordh" placeholder="Password" name="Password"> </div>
                 </div>
-                <a href="" class="pull-right" data-toggle="modal" data-dismiss="modal" data-target="#resetpass" >ลืมรหัสผ่าน</a>
+                <a href="" class="pull-right" data-toggle="modal" data-dismiss="modal" data-target="#resetpass" >Forgot Password</a>
               </div>
               <div class="modal-footer">
-               <button type="submit" class="btn btn-primary" style="background-color: #581845">เข้าสู่ระบบ</button>
-               <button type="submit" class="btn btn-secondary" data-dismiss="modal">ปิด</button> 
+               <button type="submit" class="btn btn-primary" style="background-color: #581845">Login</button>
+               <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button> 
              </div>
            </div>
          </form>
@@ -41,7 +41,7 @@
         <form id="c_form-h" method="post" action="resetpassword_db.php">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">ลืมรหัสผ่าน</h5> 
+            <h5 class="modal-title">Forgot Password</h5> 
             <button type="button" class="close" data-dismiss="modal" style="background-color: #581845"> <span>×</span> 
             </button>
           </div>
@@ -57,8 +57,8 @@
             
           </div>
           <div class="modal-footer"> 
-            <button type="submit" class="btn text-light " style="background-color: #581845">ลืมรหัสผ่าน</button> 
-            <button type="submit" class="btn btn-secondary" data-dismiss="modal">ปิด</button> 
+            <button type="submit" class="btn text-light " style="background-color: #581845">Forgot Password</button> 
+            <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button> 
           </div>
         </div>
 </form>

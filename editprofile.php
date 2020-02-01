@@ -33,7 +33,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h1 class="text-center"><b>แก้ไขข้อมูล</b></h1>
+                <h1 class="text-center"><b>Edit Your Profile</b></h1>
                 <hr>
               </div>
             </div>
@@ -49,24 +49,24 @@
                   <table border="0">
                    <tbody>
                     <tr>
-                      <td>ชื่อ</td>
+                      <td>Name</td>
                       <td>
                         <input type="text" name="Firstname" class="form-control" id="inlineFormInputGroup" required="กรุณากรอกชื่อ" placeholder="กรุณากรอกชื่อ"  value="<?php echo($num['Firstname'])?>" onkeyup="validate();" minlength="3" maxlength="25" title="ใส่ ก-ฮ หรือ a-z เท่านั้น">
                       </td>
 
                       <td></td>
-                      <td>นามสกุล</td>
+                      <td>Last Name</td>
                       <td>
                         <input type="text" name="Lastname" class="form-control" id="inlineFormInputGroup" required="กรุณากรอกนามสกุล" placeholder="กรุณากรอกนามสกุล" value="<?php echo($num['Lastname'])?>"  onkeyup="validate();" minlength="3" maxlength="25" title="ใส่ ก-ฮ หรือ a-z เท่านั้น">
                       </td>
                     </tr>
                     <tr>
-                      <td>อีเมล์</td>
+                      <td>E-mail</td>
                       <td>
                        <input type="email" name="email" class="form-control" id="inputmailh" required="กรุณากรอกอีเมล์" placeholder="กรุณากรอกอีเมล์"  value="<?php echo($num['email'])?>">
                      </td>
                      <td></td>
-                     <td>เบอร์โทร</td>
+                     <td>Phone</td>
                      <td>
                        <input name="phone" class="form-control" id="input-num" required="กรุณากรอกเบอร์โทร" placeholder="กรุณากรอกเบอร์โทร" value="<?php echo($num['phone'])?>" title="เบอร์โทร 0-9" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                        type="tel"
@@ -75,19 +75,19 @@
                    </tr>
 
                    <tr>
-                     <td>ชื่อผู้ใช้</td>
+                     <td>Username</td>
                      <td>
                       <input type="text" class="form-control" readonly  value="<?php echo($num['Username'])?>">
                     </td>
                     <td></td>
-                    <td>รหัสผ่าน</td>
+                    <td>Password</td>
                     <td>
                       <input type="password" name="Password" class="form-control" required  value="<?php echo($num['Password'])?>">
                     </td>
                   </tr>
                   <input type="hidden" name="id" value="<?php echo($num['ID'])?>">
                   <tr>
-                    <td>รหัสประจำตัวนักเรียน</td>
+                    <td>Namber</td>
                     <td>
                       <input type="text" class="form-control" id="input-num-id" name="stid" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" minlength="10" required="required"  value="<?php echo($num['user_stid'])?>" 
                       onkeyup="numid();">
@@ -114,10 +114,10 @@
                  <td></td>
                  <td></td>
                  <td> 
-                   <button name="btn" class="btn btn-outline-success" >ยืนยัน</button>
+                   <button name="btn" class="btn btn-outline-success" >Confirm</button>
                  </td>
                  <td> 
-                  <a class="btn btn-outline-danger" href="index1.php">ยกเลิก</a>
+                  <a class="btn btn-outline-danger" href="index1.php">Cancel</a>
                 </td>
               </tr>
             </tfoot>
@@ -193,9 +193,9 @@ if ($eu == ''): ?>
     var password = $("#txtNewPassword").val();
     var confirmPassword = $("#txtConfirmPassword").val();
     if (password != confirmPassword)
-      $("#divCheckPasswordMatch").html("รหัสผ่านไม่ตรงกัน!");
+      $("#divCheckPasswordMatch").html("Password Not Match!");
     else
-      $("#divCheckPasswordMatch").html("รหัสผ่านตรงกัน");
+      $("#divCheckPasswordMatch").html("Password Match");
   }
 
           /*
