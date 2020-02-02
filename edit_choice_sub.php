@@ -29,7 +29,7 @@ if (isset($_GET['id'])) {
     <div class="container">
       <div class="row">
         <div class="mx-auto p-4 col-lg-7">
-          <h1 class="mb-4">แก้ไขหมวดหมู่</h1>
+          <h1 class="mb-4">Edit Lesson</h1>
           <form action="edit_choice_sub_db.php" method="post">
 
             <div class="form-group row"> 

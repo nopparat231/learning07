@@ -15,7 +15,7 @@ $totalRows_user = mysqli_num_rows($user);
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-center"><b>แก้ไขข้อมูล</b></h1>
+        <h1 class="text-center"><b>Edit User</b></h1>
         <hr>
       </div>
     </div>

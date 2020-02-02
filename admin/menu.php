@@ -3,7 +3,7 @@
    		
    		<?php if(isset($_SESSION["Userlevel"]) == "A"): ?>
 
-         <a href="index.php" class="border-0 list-group-item d-flex justify-content-between align-items-center list-group-item-action"> หน้าหลัก </a>
+         <a href="index.php" class="border-0 list-group-item d-flex justify-content-between align-items-center list-group-item-action"> Home </a>
 
          <a href="index.php?su" class="border-0 list-group-item d-flex justify-content-between align-items-center list-group-item-action">ผู้ดูแลระบบ </a>
 

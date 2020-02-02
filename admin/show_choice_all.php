@@ -30,7 +30,7 @@ $totalRows_ch = mysqli_num_rows($ch);
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="text-center" >หมวดหมู่ทั้งหมด</h1>
+          <h1 class="text-center" >Lesson</h1>
           <hr>
         </div>
       </div>
@@ -48,13 +48,13 @@ $totalRows_ch = mysqli_num_rows($ch);
           
 
 
-            <a href="showchoice.php" class="btn btn-outline-success my-2 my-sm-0 pull-right" data-toggle='modal' data-target='#addchoiceModal'>เพิ่มหมวดหมู่</a>
+            <a href="showchoice.php" class="btn btn-outline-success my-2 my-sm-0 pull-right" data-toggle='modal' data-target='#addchoiceModal'>Add Lesson</a>
             <table class="table table-striped table-bordered" id="example">
              <?php if ($totalRows_model > 0) {?>
 
               <thead>
                 <tr class="text-center">
-                  <th scope="col" width="5">ลำดับ</th>
+                  <th scope="col" width="5">No.</th>
                   <th scope="col">ชื่อบทเรียน</th>
                   <th scope="col">ลิ้งค์</th>
 

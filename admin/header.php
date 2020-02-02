@@ -6,7 +6,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <title>สื่อแอนิเมชั่น</title>
+  <title>E-Laning</title>
   <!-- <link rel="icon" href="./img/5.png" /> -->
   <link rel="shortcut icon" href="../img/mortarboard.png" />
   <style type="text/css">

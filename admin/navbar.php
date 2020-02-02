@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbar6"> 
     <a class="navbar-brand text-primary d-none d-md-block" href="index.php">
 
-     <b><font color="blue">หน้าหลัก</font></b>
+     <b><font color="blue">Home</font></b>
    </a>
 
    <?php if (isset($_SESSION["Userlevel"]) == "A") {
@@ -17,8 +17,8 @@
     <?php $user_id=$_SESSION['UserID']; ?>
     <ul class="navbar-nav">
 
-      <li class="nav-item"> <a class="nav-link" href="index.php?su">จัดการข้อมูลผู้ใช้</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="index.php?sc">จัดการแบบทดสอบ</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="index.php?su">Edit User</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="index.php?sc">Edit Lesson</a> </li>
 
 
     </ul>

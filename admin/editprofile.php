@@ -17,7 +17,7 @@ $num = mysqli_fetch_assoc($result);
 
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">แก้ไขข้อมูล</h5>
+          <h5 class="modal-title">Edit User</h5>
           <button type="button" class="close" data-dismiss="modal"> <span>×</span> </button>
         </div>
         <div class="modal-body">
@@ -29,24 +29,24 @@ $num = mysqli_fetch_assoc($result);
               <table border="0">
                <tbody>
                 <tr>
-                  <td>ชื่อ</td>
+                  <td>Name</td>
                   <td style="width: 300px">
                     <input type="text" name="Firstname" class="form-control" id="inlineFormInputGroup" required="กรุณากรอกชื่อ" placeholder="กรุณากรอกชื่อ"  value="<?php echo($num['Firstname'])?>" onkeyup="validate();" minlength="3" maxlength="25" title="ใส่ ก-ฮ หรือ a-z เท่านั้น">
                   </td>
 
                   <td></td>
-                  <td>นามสกุล</td>
+                  <td>Last Name</td>
                   <td>
                     <input type="text" name="Lastname" class="form-control" id="inlineFormInputGroup" required="กรุณากรอกนามสกุล" placeholder="กรุณากรอกนามสกุล" value="<?php echo($num['Lastname'])?>"  onkeyup="validate();" minlength="3" maxlength="25" title="ใส่ ก-ฮ หรือ a-z เท่านั้น">
                   </td>
                 </tr>
                 <tr>
-                  <td>อีเมล์</td>
+                  <td>E-mail</td>
                   <td>
                    <input type="email" name="email" class="form-control" id="inputmailh" required="กรุณากรอกอีเมล์" placeholder="กรุณากรอกอีเมล์"  value="<?php echo($num['email'])?>">
                  </td>
                  <td></td>
-                 <td>เบอร์โทร</td>
+                 <td>Phone</td>
                  <td>
                    <input name="phone" class="form-control" id="input-num" required="กรุณากรอกเบอร์โทร" placeholder="กรุณากรอกเบอร์โทร" value="<?php echo($num['phone'])?>" title="เบอร์โทร 0-9" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                    type="tel"
@@ -55,12 +55,12 @@ $num = mysqli_fetch_assoc($result);
                </tr>
 
                <tr>
-                 <td>ชื่อผู้ใช้</td>
+                 <td>User Name</td>
                  <td>
                   <input type="text" class="form-control" readonly  value="<?php echo($num['Username'])?>">
                 </td>
                 <td></td>
-                <td>รหัสผ่าน</td>
+                <td>Password</td>
                 <td>
                   <input type="password" name="Password" class="form-control" required  value="<?php echo($num['Password'])?>">
                 </td>
@@ -69,14 +69,14 @@ $num = mysqli_fetch_assoc($result);
               <tr>
 
 
-                <td>รหัสประจำตัว</td>
+                <td>Number</td>
                 <td>
                   <input type="number" class="form-control" id="input-num-id" name="stid" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" minlength="10" required="required"  value="<?php echo($num['user_stid'])?>" 
                   onkeyup="numid();">
                 </td>
                 <td></td>
 
-                <td>ประเภท</td>
+                <td>Group</td>
                 <td>
                   <?php 
                   $m = '';
@@ -91,9 +91,9 @@ $num = mysqli_fetch_assoc($result);
                   }
                   ?>
                   <select class="custom-select" name="Userlevel" style="width: 210px">
-                   <option <?php echo $a; ?> value="A">ครู</option>
-                   <option <?php echo $m; ?> value="M">นักเรียน</option>
-                   <option <?php echo $e; ?> value="M">ยกเลิก</option>
+                   <option <?php echo $a; ?> value="A">Teacher</option>
+                   <option <?php echo $m; ?> value="M">Student</option>
+                   <option <?php echo $e; ?> value="M">Cancel</option>
 
                  </select>
                </td>

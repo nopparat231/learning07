@@ -7,21 +7,21 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">เพิ่มหมวดหมู่</h5>
+            <h5 class="modal-title">Add Lesson</h5>
             <button type="button" class="close" data-dismiss="modal"> <span>×</span> </button>
           </div>
           <div class="modal-body">
             <form action="add_choice_db.php" id="c_form-h" class=""  method="post">
 
               <div class="form-group row"> 
-                <label for="inputmailh" class="col-3 col-form-label">ชื่อหมวดหมู่</label>
+                <label for="inputmailh" class="col-3 col-form-label">Lesson</label>
                 <div class="col-9">
-                  <input type="text" class="form-control" required="required" id="choice_name" name="choice_name" placeholder="กรุณากรอกหมวดหมู่"> 
+                  <input type="text" class="form-control" required="required" id="choice_name" name="choice_name" placeholder="Lesson"> 
                 </div>
               </div>
 
               <div class="form-group row"> 
-                <label for="inputmailh" class="col-3 col-form-label">เลือกไฟล์ Video</label>
+                <label for="inputmailh" class="col-3 col-form-label">Choose Video</label>
                 <div class="col-9">
 
                   <?php //include 'up.php'; ?>
@@ -33,17 +33,17 @@
               </div>
 
               <div class="form-group row"> 
-                <label for="inputmailh" class="col-3 col-form-label">รายละเอียด</label>
+                <label for="inputmailh" class="col-3 col-form-label">Detail</label>
                 <div class="col-9">
-                  <input type="text" class="form-control"  required="required"  id="choice_detail" name="choice_detail" placeholder="กรุณากรอก รายละเอียด" > 
+                  <input type="text" class="form-control"  required="required"  id="choice_detail" name="choice_detail" placeholder="Detail" > 
                 </div>
               </div>
 
             </form>
           </div>
           <div class="modal-footer"> 
-            <button type="submit" class="btn btn-primary">ยืนยัน</button> 
-            <button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
+            <button type="submit" class="btn btn-primary">Confirm</button> 
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
           </div>
         </div>
       </div>

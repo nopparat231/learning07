@@ -36,15 +36,15 @@ $totalRows_user = mysqli_num_rows($user);
 
 								<thead class="thead-dark">
 									<tr class="text-center">
-										<th scope="col" width="5">ลำดับ</th>
-										<th scope="col">ชื่อผู้ใช้</th>
-										<th scope="col">ชื่อ - สกุล</th>
-										<th scope="col">ข้อมูลติดต่อ</th>
+										<th scope="col" width="5">No.</th>
+										<th scope="col">Username</th>
+										<th scope="col">Name</th>
+										<th scope="col">Info.</th>
 										<!-- <th scope="col">วันหมดอายุ</th> -->
-										<th scope="col">สถานะ</th>
+										<th scope="col">Status</th>
 
-										<th scope="col" width="5">แก้ไข</th>
-										<th scope="col" width="5">ยกเลิก</th>
+										<th scope="col" width="5">Edit</th>
+										<th scope="col" width="5">Cancel</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -59,17 +59,17 @@ $totalRows_user = mysqli_num_rows($user);
 											<td><?php echo $i ?></td>
 											<td><?php echo $row_user['Username']; ?></td>
 											<td><?php echo $row_user['Firstname'] . "  " . $row_user['Lastname']; ?></td>
-											<td class="text-left"><?php echo " รหัสประจำตัว : " . $row_user['user_stid'] . " <br />  " . " เบอร์โทร : " . $row_user['phone'] . " <br /> อีเมล์ : " . $row_user['email']; ?></td>
+											<td class="text-left"><?php echo " Number : " . $row_user['user_stid'] . " <br />  " . " Phone : " . $row_user['phone'] . " <br /> E-mail : " . $row_user['email']; ?></td>
 									
 											<td>
 												<?php 
 
 												if ($row_user['Userlevel'] == 'A' ){
-													echo "คุณครู";
+													echo "Teacher";
 												}elseif ($row_user['Userlevel'] == 'M') {
-													echo "นักเรียน";
+													echo "Student";
 												}elseif ($row_user['Userlevel'] == 'E') {
-													echo "<font color='red' >ยกเลิก</font>";
+													echo "<font color='red' >Delete</font>";
 												}
 
 												?>
@@ -100,7 +100,7 @@ $totalRows_user = mysqli_num_rows($user);
 									</tbody>
 								</table>
 							<?php }else {
-								echo "<h3> ยังไม่มีคะแนน </h3>";
+								echo "<h3> No Score </h3>";
 							}
 
 							mysqli_free_result($user);?>

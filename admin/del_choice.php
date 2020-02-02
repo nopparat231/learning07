@@ -3,6 +3,7 @@
 
 <?php
 
+
 $choice_id = $_GET['choice_id'];
 
 $st = $_GET['st'];
@@ -19,6 +20,7 @@ mysqli_close($con);
 
 if($result){
 	echo "<script>";
+	//echo "confirm('Delete Lesson?');";
 	echo "window.location ='index.php?sc'; ";
 	echo "</script>";
 } else {
@@ -28,4 +30,5 @@ if($result){
 	echo "window.location ='index.php?sc'; ";
 	echo "</script>";
 }
+
 ?>

@@ -11,7 +11,7 @@
   <link rel="shortcut icon" href="img/light-bulb.png" />
   <style type="text/css">
     body {
-      background-image: url("img/69.jpg");
+      background-image: url("img/email-pattern.png");
       background-color: #cccc;
       font-family: 'Itim', cursive;
     }

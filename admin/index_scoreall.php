@@ -13,7 +13,7 @@ $totalRows_learning = mysqli_num_rows($learning);
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-center">คะแนนผู้ใช้งานทังหมด</h1>
+        <h1 class="text-center">Score All</h1>
         <hr>
       </div>
     </div>
@@ -29,12 +29,12 @@ $totalRows_learning = mysqli_num_rows($learning);
           <table class="table table-hover" id="example" bgcolor="white">
             <thead class="thead-dark">
               <tr class="text-center">
-                <th scope="col">ลำดับที่</th>
-                <th scope="col">วันที่</th>
-                <th scope="col">ชื่อ-นามสกุล</th>
-                <th scope="col">บทเรียน</th>
-                <th scope="col">คะแนนก่อนเรียน</th>
-                <th scope="col">คะแนนหลังเรียน</th>
+                <th scope="col">No.</th>
+                <th scope="col">Date</th>
+                <th scope="col">Name</th>
+                <th scope="col">Lesson</th>
+                <th scope="col">Pre Test</th>
+                <th scope="col">Post Test</th>
               </tr>
             </thead>
             <tbody>
@@ -62,7 +62,7 @@ $totalRows_learning = mysqli_num_rows($learning);
 
       </div>
     <?php }else {
-      echo "<h3> ยังไม่มีคะแนน </h3>";
+      echo "<h3> No Score </h3>";
     }
 
     mysqli_free_result($learning);?>

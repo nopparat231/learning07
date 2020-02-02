@@ -44,11 +44,11 @@ $totalRows_choice = mysqli_num_rows($choice);
          <p class="card-text"><h4><?php echo $row_choice['choice_detail']; ?></h4></p>
 
          <!-- Card Action -->
-         <a href="index.php?ec&choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff"><p class="btn btn-xs btn-warning" >แก้ไขบทเรียน</p></a>
+         <a href="index.php?ec&choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff"><p class="btn btn-xs btn-warning" >Edit Lesson</p></a>
 
-         <a href="index.php?showchoice_s&choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff"><p class="btn btn-xs btn-info" >แก้ไขคำถาม</p></a>
+         <a href="index.php?showchoice_s&choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff"><p class="btn btn-xs btn-info" >Edit Question</p></a>
 
-         <a href="del_choice.php?choice_id=<?php echo $row_choice['choice_id'];?>&st=1"><p class="btn btn-xs btn-danger" >ลบ</p></a>
+         <a href="del_choice.php?choice_id=<?php echo $row_choice['choice_id'];?>&st=1" onclick="return confirm('Are you sure?')"><p class="btn btn-xs btn-danger" >Del</p></a>
 
        </div>
      </div>
@@ -56,7 +56,7 @@ $totalRows_choice = mysqli_num_rows($choice);
    <?php } while ($row_choice = mysqli_fetch_assoc($choice)); ?>
 
  <?php } else {
-  echo "<center>ไม่มีคำถาม</center>";
+  echo "<center> No Lesson</center>";
 }
 mysqli_free_result($choice);
 ?>

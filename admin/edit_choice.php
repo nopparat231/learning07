@@ -20,22 +20,22 @@ $totalRows_editc = mysqli_num_rows($editc);
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">แก้ไขหมวดหมู่</h5>
+            <h5 class="modal-title">Edit Lesson</h5>
             <button type="button" class="close" data-dismiss="modal"> <span>×</span> </button>
           </div>
           <div class="modal-body">
             <form action="add_choice_db.php" id="c_form-h" class=""  method="post">
 
               <div class="form-group row"> 
-                <label for="inputmailh" class="col-3 col-form-label">ชื่อหมวดหมู่</label>
+                <label for="inputmailh" class="col-3 col-form-label">Lesson</label>
                 <div class="col-9">
-                 <input type="text" class="form-control" required="required" id="choice_name" name="choice_name" placeholder="กรุณากรอกหมวดหมู่"  value="<?php echo $row_editc['choice_name'] ?>"> 
+                 <input type="text" class="form-control" required="required" id="choice_name" name="choice_name" placeholder="Lesson"  value="<?php echo $row_editc['choice_name'] ?>"> 
                  <input type="hidden" name="choice_id" value="<?php echo $choice_id; ?>">
                </div>
              </div>
 
              <div class="form-group row"> 
-              <label for="inputmailh" class="col-3 col-form-label">เลือกไฟล์ Video</label>
+              <label for="inputmailh" class="col-3 col-form-label">Chose Video</label>
               <div class="col-9">
 
 
@@ -49,17 +49,17 @@ $totalRows_editc = mysqli_num_rows($editc);
             </div>
 
             <div class="form-group row"> 
-              <label for="inputmailh" class="col-3 col-form-label">รายละเอียด</label>
+              <label for="inputmailh" class="col-3 col-form-label">Detail</label>
               <div class="col-9">
-                <input type="text" class="form-control"  required="required"  id="videodetail" name="choice_detail" placeholder="กรุณากรอก รายละเอียด"  value="<?php echo $row_editc['choice_detail'] ?>"> 
+                <input type="text" class="form-control"  required="required"  id="videodetail" name="choice_detail" placeholder="Detail"  value="<?php echo $row_editc['choice_detail'] ?>"> 
               </div>
             </div>
 
           </form>
         </div>
         <div class="modal-footer"> 
-          <button type="submit" class="btn btn-primary">ยืนยัน</button>
-          <a href="index.php?sc"  type="button" class="btn btn-danger" >ยกเลิก</a>
+          <button type="submit" class="btn btn-primary">Confirm</button>
+          <a href="index.php?sc"  type="button" class="btn btn-danger" >Cancel</a>
 
         </div>
       </div>

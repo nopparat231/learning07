@@ -70,7 +70,7 @@ $totalRows_watch = mysqli_num_rows($watch);
                <p class="card-text"><h4><?php echo $row_choice['choice_detail']; ?></h4></p>
 
                <!-- Card Action -->
-               <a href="choice.php?choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff"><p class="btn btn-xs btn-info" >ทำแบบทดสอบก่อนเรียนแล้ว</p></a>
+               <a href="choice.php?choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff"><p class="btn btn-xs btn-info" >Pre test Succeed</p></a>
              </div>
            </div>
 
@@ -96,7 +96,7 @@ $totalRows_watch = mysqli_num_rows($watch);
                <p class="card-text"><h4><?php echo $row_choice['choice_detail']; ?></h4></p>
 
                <!-- Card Action -->
-               <a href="watch.php?choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff&cff"><p class="btn btn-xs btn-danger">ทำแบบทดสอบแล้ว</p></a>
+               <a href="watch.php?choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff&cff"><p class="btn btn-xs btn-danger">Lesson Succeed</p></a>
              </div>
            </div>
 
