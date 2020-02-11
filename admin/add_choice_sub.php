@@ -47,7 +47,7 @@ $totalRows_cc = mysqli_num_rows($cc);
           <div class="form-group row"> 
             <label for="inputmailh" class="col-1 col-form-label">Question</label>
             <div class="col-11">
-              <input type="text" class="form-control" id="question" name="question" required="required" placeholder="กรุณากรอกคำถาม"> </div>
+              <input type="text" class="form-control" id="question" name="question" required="required" placeholder="Question"> </div>
             </div>
 
             <div class="form-group row"> 
