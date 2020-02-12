@@ -10,7 +10,7 @@ $totalRows_cc = mysqli_num_rows($cc);
 ?>
 <body>
 
-
+<script src="./tinymce/tinymce.min.js"></script>
 
   <form action="add_choice_sub_db.php" method="post">
 
@@ -47,7 +47,11 @@ $totalRows_cc = mysqli_num_rows($cc);
           <div class="form-group row"> 
             <label for="inputmailh" class="col-1 col-form-label">Question</label>
             <div class="col-11">
-              <input type="text" class="form-control" id="question" name="question" required="required" placeholder="Question"> </div>
+            <!--   <input type="text" class="form-control" id="question" name="question" required="required" placeholder="Question">  -->
+
+   <textarea class="form-control" id="question" name="question" placeholder="Question" ></textarea> 
+
+            </div>
             </div>
 
             <div class="form-group row"> 
@@ -106,4 +110,23 @@ $totalRows_cc = mysqli_num_rows($cc);
               var element = document.getElementById('input-num');
               element.value = element.value.replace(/[^1-4]+/, '');
             };
+
+            tinymce.init({
+    selector: "textarea",theme: "modern",width: 680,height: 300,
+    plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+         "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+         "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
+   ],
+   toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+   toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+   image_advtab: true ,
+   
+   external_filemanager_path:"./filemanager/",
+   filemanager_title:"Responsive Filemanager" ,
+   external_plugins: { "filemanager" : "../filemanager/plugin.min.js"}
+   ,relative_urls:false,
+   remove_script_host:false,
+   document_base_url:"http://localhost/tiny"
+ });
           </script>

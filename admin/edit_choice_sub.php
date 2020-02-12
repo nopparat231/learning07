@@ -26,6 +26,7 @@ if (isset($_GET['id'])) {
 <?php } ?>
 
 <body>
+<script src="./tinymce/tinymce.min.js"></script>
 
       <div class="modal fade bd-example-modal-lg" id="edcModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -73,7 +74,14 @@ if (isset($_GET['id'])) {
             <div class="form-group row"> 
               <label for="inputmailh" class="col-1 col-form-label">Question</label>
               <div class="col-11">
-                <input type="text" class="form-control" id="question" name="question" required="required" placeholder="Question" value="<?php echo $row_editc['question'] ?>"> </div>
+
+               <!--  <input type="text" class="form-control" id="question" name="question" required="required" placeholder="Question" value="<?php //echo $row_editc['question'] ?>">
+ -->
+  <textarea class="form-control" id="question" name="question" placeholder="Question" >
+    <?php echo $row_editc['question'] ?>
+  </textarea>
+
+                 </div>
               </div>
 
               <div class="form-group row"> 
@@ -128,4 +136,25 @@ if (isset($_GET['id'])) {
                 var element = document.getElementById('input-num');
                 element.value = element.value.replace(/[^1-4]+/, '');
               };
+
+tinymce.init({
+    selector: "textarea",theme: "modern",width: 680,height: 300,
+    plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+         "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+         "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
+   ],
+   toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+   toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+   image_advtab: true ,
+   
+   external_filemanager_path:"./filemanager/",
+   filemanager_title:"Responsive Filemanager" ,
+   external_plugins: { "filemanager" : "../filemanager/plugin.min.js"}
+   ,relative_urls:false,
+   remove_script_host:false,
+   document_base_url:"http://localhost/tiny"
+ });
+
+              
             </script>
