@@ -76,7 +76,7 @@ $config = array(
     | with start and final /
     |
     */
-    'upload_dir' => '/learning07/admin/source/',
+    'upload_dir' => '/learningroom.net/admin/source/',
     /*
     |--------------------------------------------------------------------------
     | relative path from filemanager folder to upload folder
@@ -107,7 +107,7 @@ $config = array(
     | DO NOT put inside upload folder
     |
     */
-    'thumbs_upload_dir' => '/learning07/admin/thumbs/',
+    'thumbs_upload_dir' => '/thumbs/',
 
 
     /*

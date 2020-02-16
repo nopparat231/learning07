@@ -10,7 +10,7 @@ $totalRows_cc = mysqli_num_rows($cc);
 ?>
 <body>
 
-<script src="./tinymce/tinymce.min.js"></script>
+<script src="tinymce/tinymce.min.js"></script>
 
   <form action="add_choice_sub_db.php" method="post">
 

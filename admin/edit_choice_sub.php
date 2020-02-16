@@ -153,7 +153,7 @@ tinymce.init({
    external_plugins: { "filemanager" : "../filemanager/plugin.min.js"}
    ,relative_urls:false,
    remove_script_host:false,
-   document_base_url:"http://localhost/tiny"
+   document_base_url:"http://localhost/"
  });
 
               
