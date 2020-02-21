@@ -5,7 +5,7 @@
   <div class="form-group row"><label class="col-2 col-form-label">Username<br></label>
     <div class="col-9">
       <div class="input-group">
-        <input type="text" name="Username" class="form-control" id="input-user" required placeholder="Username" pattern="^[a-zA-Z0-9]+$" autocomplete="off" title="ภาษาอังกฤษหรือตัวเลขเท่านั้น" minlength="3" maxlength="25" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onkeyup="user();" >
+        <input type="number" name="Username" class="form-control" id="input-user" required placeholder="Username" pattern="^[a-zA-Z0-9]+$" autocomplete="off" title="ภาษาอังกฤษหรือตัวเลขเท่านั้น" minlength="3" maxlength="25" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onkeyup="user();" >
       </div>
     </div><font color="red" size="5">*</font>
   </div>
@@ -40,7 +40,7 @@
 </div>
 <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">E-mail</label>
   <div class="col-9">
-    <input type="email" name="email" class="form-control" id="inputmailh" required="กรุณากรอกอีเมล์" placeholder="กรุณากรอกอีเมล์" autocomplete="off" title="กรุณาใช้ อีเมล์ ที่ใช้งานได้จริง" />
+    <input type="text" name="email" class="form-control" id="inputmailh" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required placeholder="กรุณากรอกอีเมล์" autocomplete="off" title="กรุณาใช้ อีเมล์ ที่ใช้งานได้จริง" />
   </div><font color="red" size="5">*</font>
 </div>
 <div class="form-group row">
@@ -54,13 +54,13 @@
   </div><font color="red" size="5">*</font>
 </div>
 
-<div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Namber</label>
+<!-- <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Namber</label>
   <div class="col-9">
     <input type="number" name="user_stid" class="form-control" id="user_stid" required="กรุณากรอกรหัสให้ครบ" placeholder="กรุณากรอกรหัสประจำตัว" autocomplete="off" title="กรุณากรอกรหัสให้ครบ" />
   </div><font color="red" size="5">*</font>
-</div>
+</div> -->
 
-<div class="form-group row">
+<!-- <div class="form-group row">
  <label class="col-2">Group</label>
  <div class="col-9">
   <div class="input-group">
@@ -72,7 +72,7 @@
     </select>
   </div>
 </div><font color="red" size="5">*</font>
-</div>
+</div> -->
 
 <label></label>
 <label class="pull-left"><font color="red">*</font>Please fill out all information.</label>

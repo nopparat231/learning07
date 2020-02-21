@@ -59,17 +59,17 @@ $totalRows_user = mysqli_num_rows($user);
 											<td><?php echo $i ?></td>
 											<td><?php echo $row_user['Username']; ?></td>
 											<td><?php echo $row_user['Firstname'] . "  " . $row_user['Lastname']; ?></td>
-											<td class="text-left"><?php echo " Number : " . $row_user['user_stid'] . " <br />  " . " Phone : " . $row_user['phone'] . " <br /> E-mail : " . $row_user['email']; ?></td>
+											<td class="text-left"><?php echo " Phone : " . $row_user['phone'] . " <br /> E-mail : " . $row_user['email']; ?></td>
 									
 											<td>
 												<?php 
 
 												if ($row_user['Userlevel'] == 'A' ){
-													echo "Teacher";
+													echo "Normal";
 												}elseif ($row_user['Userlevel'] == 'M') {
-													echo "Student";
+													echo "Normal";
 												}elseif ($row_user['Userlevel'] == 'E') {
-													echo "<font color='red' >Delete</font>";
+													echo "<font color='red' >Remove</font>";
 												}
 
 												?>

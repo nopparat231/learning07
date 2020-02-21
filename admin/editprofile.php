@@ -93,7 +93,7 @@ $num = mysqli_fetch_assoc($result);
                   <select class="custom-select" name="Userlevel" style="width: 210px">
                    <option <?php echo $a; ?> value="A">Teacher</option>
                    <option <?php echo $m; ?> value="M">Student</option>
-                   <option <?php echo $e; ?> value="M">Cancel</option>
+                   <option <?php echo $e; ?> value="M">Remove</option>
 
                  </select>
                </td>
@@ -125,8 +125,8 @@ $num = mysqli_fetch_assoc($result);
 
 
   <div class="modal-footer"> 
-    <button type="submit" class="btn btn-primary">ยืนยัน</button> 
-    <button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
+    <button type="submit" class="btn btn-primary">Confirm</button> 
+    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
   </div>
 </div>
 </div>
