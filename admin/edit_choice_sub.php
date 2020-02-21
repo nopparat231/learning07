@@ -26,10 +26,10 @@ if (isset($_GET['id'])) {
 <?php } ?>
 
 <body>
-<script src="./tinymce/tinymce.min.js"></script>
+ 
 
-      <div class="modal fade bd-example-modal-lg" id="edcModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
+  <div class="modal fade bd-example-modal-lg" id="edcModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
 
       <div class="modal-content">
         <div class="modal-header">
@@ -76,85 +76,85 @@ if (isset($_GET['id'])) {
               <div class="col-11">
 
                <!--  <input type="text" class="form-control" id="question" name="question" required="required" placeholder="Question" value="<?php //echo $row_editc['question'] ?>">
- -->
-  <textarea class="form-control" id="question" name="question" placeholder="Question" >
-    <?php echo $row_editc['question'] ?>
-  </textarea>
+               -->
+               <textarea class="form-control" id="question" name="question" placeholder="Question" >
+                <?php echo $row_editc['question'] ?>
+              </textarea>
 
-                 </div>
+            </div>
+          </div>
+
+          <div class="form-group row"> 
+            <label for="inputmailh" class="col-1 col-form-label">1 ).</label>
+            <div class="col-5">
+              <input type="text" class="form-control" id="c1" name="c1"  required="required" placeholder="Question 1" value="<?php echo $row_editc['c1'] ?>"> </div>
+
+              <label for="inputmailh" class="col-1 col-form-label">2 ).</label>
+              <div class="col-5">
+                <input type="text" class="form-control" id="c2" name="c2"  required="required" placeholder="Question 2"  value="<?php echo $row_editc['c2'] ?>"> </div>
+
               </div>
 
               <div class="form-group row"> 
-                <label for="inputmailh" class="col-1 col-form-label">1 ).</label>
-                <div class="col-5">
-                  <input type="text" class="form-control" id="c1" name="c1"  required="required" placeholder="Question 1" value="<?php echo $row_editc['c1'] ?>"> </div>
 
-                  <label for="inputmailh" class="col-1 col-form-label">2 ).</label>
+                <label for="inputmailh" class="col-1 col-form-label">3 ).</label>
+                <div class="col-5">
+                  <input type="text" class="form-control" id="c3" name="c3"  required="required" placeholder="Question 3" value="<?php echo $row_editc['c3'] ?>"> </div>
+
+                  <label for="inputmailh" class="col-1 col-form-label">4 ).</label>
                   <div class="col-5">
-                    <input type="text" class="form-control" id="c2" name="c2"  required="required" placeholder="Question 2"  value="<?php echo $row_editc['c2'] ?>"> </div>
+                    <input type="text" class="form-control" id="c4" name="c4"  required="required" placeholder="Question 4" value="<?php echo $row_editc['c4'] ?>"> </div>
 
                   </div>
+
 
                   <div class="form-group row"> 
-
-                    <label for="inputmailh" class="col-1 col-form-label">3 ).</label>
+                    <label for="inputmailh" class="col-1 col-form-label">Answer</label>
                     <div class="col-5">
-                      <input type="text" class="form-control" id="c3" name="c3"  required="required" placeholder="Question 3" value="<?php echo $row_editc['c3'] ?>"> </div>
-
-                      <label for="inputmailh" class="col-1 col-form-label">4 ).</label>
-                      <div class="col-5">
-                        <input type="text" class="form-control" id="c4" name="c4"  required="required" placeholder="Question 4" value="<?php echo $row_editc['c4'] ?>"> </div>
-
-                      </div>
-
-
-                      <div class="form-group row"> 
-                        <label for="inputmailh" class="col-1 col-form-label">Answer</label>
-                        <div class="col-5">
-                          <input type="number" class="form-control" id="input-num" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "1" minlength="1" onkeyup="num();" name="answer"  required="required" placeholder="Answer Ex. 1 , 2 , 3 , 4" value="<?php echo $row_editc['answer'] ?>"  /> </div>
-                        </div>
-
-
-
-                      </div>
-
-
-                      <div class="modal-footer"> 
-                        <button type="submit" class="btn btn-outline-success">Confirm</button> 
-                        <a href="#" class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close" >Cancel</a>
-                      </form>
+                      <input type="number" class="form-control" id="input-num" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "1" minlength="1" onkeyup="num();" name="answer"  required="required" placeholder="Answer Ex. 1 , 2 , 3 , 4" value="<?php echo $row_editc['answer'] ?>"  /> </div>
                     </div>
 
+
+
                   </div>
+
+
+                  <div class="modal-footer"> 
+                    <button type="submit" class="btn btn-outline-success">Confirm</button> 
+                    <a href="#" class="btn btn-outline-danger" data-dismiss="modal" aria-label="Close" >Cancel</a>
+                  </form>
                 </div>
+
               </div>
-            </body>
+            </div>
+          </div>
+        </body>
 
 
-            <script type="text/javascript">
-              function num() {
-                var element = document.getElementById('input-num');
-                element.value = element.value.replace(/[^1-4]+/, '');
-              };
+        <script type="text/javascript">
+          function num() {
+            var element = document.getElementById('input-num');
+            element.value = element.value.replace(/[^1-4]+/, '');
+          };
 
-tinymce.init({
-    selector: "textarea",theme: "modern",width: 680,height: 300,
-    plugins: [
-         "advlist autolink link image lists charmap print preview hr anchor pagebreak",
-         "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
-         "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
-   ],
-   toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
-   toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
-   image_advtab: true ,
-   
-   external_filemanager_path:"./filemanager/",
-   filemanager_title:"Responsive Filemanager" ,
-   external_plugins: { "filemanager" : "../filemanager/plugin.min.js"}
-   ,relative_urls:false,
-   remove_script_host:false,
-   document_base_url:"http://localhost/"
- });
+          tinymce.init({
+            selector: "textarea",theme: "modern",width: 680,height: 300,
+            plugins: [
+            "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+            "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+            "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
+            ],
+            toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+            toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+            image_advtab: true ,
 
-              
-            </script>
+            external_filemanager_path:"./filemanager/",
+            filemanager_title:"Responsive Filemanager" ,
+            external_plugins: { "filemanager" : "../filemanager/plugin.min.js"}
+            ,relative_urls:false,
+            remove_script_host:false,
+            document_base_url:"http://localhost/learning07"
+          });
+
+
+        </script>

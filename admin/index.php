@@ -6,6 +6,8 @@ if(session_status() == PHP_SESSION_NONE){
 
 
 ?>
+ <script src="./js/jquery.fileupload-image.js"></script>
+ <script src="./tinymce/tinymce.min.js"></script>
 <?php include '../check.php'; ?>
 <!DOCTYPE html>
 <html>
@@ -50,7 +52,7 @@ if(session_status() == PHP_SESSION_NONE){
         }elseif ($shs <> '') {
           include 'showchoice_sub.php'; ?>
 
-      <?php  }elseif ($sp <> '') {
+        <?php  }elseif ($sp <> '') {
           include 'editprofile_show.php';
         }elseif ($editc <> '') {
          include 'show_choice_all.php';
@@ -123,12 +125,12 @@ if(session_status() == PHP_SESSION_NONE){
 </div>
 
 <br><br><br>
- <?php include 'footer_admin.php'; 
+<?php include 'footer_admin.php'; 
 
 //เช็คแก้ไขคำถาม
 $id = '';
 if (isset($_GET['id'])){
-$id = $_GET['id'];
+  $id = $_GET['id'];
 
 
 
@@ -138,7 +140,7 @@ if ($id <> '') {
 
  ?>
 
-  <script type="text/javascript">
+ <script type="text/javascript">
 
     //onload show modal script ชุดนี้โหลดมาตรงๆ ไม่มีหน่วงเวลานะ
     $(document).ready(function(){
@@ -153,15 +155,34 @@ if ($id <> '') {
 
 <?php if ($eus <> ''): ?>
 
-<?php if (isset($_GET['user_id'])){ 
-include 'editprofile.php';
-?>
+  <?php if (isset($_GET['user_id'])){ 
+    include 'editprofile.php';
+    ?>
 
-  <script type="text/javascript">
+    <script type="text/javascript">
 
     //onload show modal script ชุดนี้โหลดมาตรงๆ ไม่มีหน่วงเวลานะ
     $(document).ready(function(){
       $("#EditUseModal").modal('show');
+    });
+
+    tinymce.init({
+      selector: "textarea",theme: "modern",width: 680,height: 300,
+      plugins: [
+      "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+      "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+      "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
+      ],
+      toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+      toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+      image_advtab: true ,
+
+      external_filemanager_path:"./filemanager/",
+      filemanager_title:"Responsive Filemanager" ,
+      external_plugins: { "filemanager" : "../filemanager/plugin.min.js"}
+      ,relative_urls:false,
+      remove_script_host:false,
+      document_base_url:"http://localhost/learning07"
     });
     
 
@@ -169,7 +190,7 @@ include 'editprofile.php';
 
 <?php } ?>
 
- <?php endif ?>
+<?php endif ?>
 
 </body>
 
