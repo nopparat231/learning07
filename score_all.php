@@ -55,6 +55,7 @@ $totalRows_learning = mysqli_num_rows($learning);
                         <th scope="col">Name</th>
                         <th scope="col">Lesson</th>
                         <th scope="col">Pre Test</th>
+                        <th scope="col">Studying Test</th>
                         <th scope="col">Post Test</th>
                       </tr>
                     </thead>
@@ -71,6 +72,7 @@ $totalRows_learning = mysqli_num_rows($learning);
                           <td><?php echo $row_learning['Firstname']. "  " .$row_learning['Lastname']; ?></td>
                           <td><?php echo $row_learning['choice_name']; ?>
                           <td><?php echo $row_learning['user_learning_bf']; ?></td>
+                          <td><?php echo $row_learning['user_learning_wa']; ?></td>
                           <td><?php echo $row_learning['user_learning_af']; ?></td>
                         </tr>
 

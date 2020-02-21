@@ -48,7 +48,7 @@
          <a class='fa text-primary nav-link' ><?php echo $_SESSION["User"]; ?></a>
        </li>
        <li class="nav-item">  
-         <?php echo "<a class='fa text-danger nav-link' href='logout.php'>ออกจากระบบ</a>"; }
+         <?php echo "<a class='fa text-danger nav-link' href='logout.php'>Logout</a>"; }
          ?> 
 
        </li>
