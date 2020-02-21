@@ -199,9 +199,9 @@ $resultN=mysqli_fetch_array($db_queryN);
     <div class="row">
       <div class="col-md-12 text-center">
         <?php if (isset($_REQUEST['af'])) { ?>
-         <a href="score.php?user_id=<?php echo $user_id ?>" class="btn btn-secondary" type="button" >ดูคะแนนรวม</a>
+         <a href="score.php?user_id=<?php echo $user_id ?>" class="btn btn-info" type="button" >Scall All</a>
        <?php }else{ ?>
-         <button class="btn btn-xs btn-danger buttonn" id="btn1" >ส่งคำตอบ</button>
+         <button class="btn btn-xs btn-danger buttonn" id="btn1" >Sent</button>
 
        <?php   } ?>
 
@@ -273,11 +273,11 @@ function bf(){
 
     setTimeout(function () { 
       swal({
-        title: "คะแนนก่อนเรียน <?php echo $score ?> คะแนน",
+      title: "Your Score <?php echo $score ?> ",
 
-        type: "success",
+      type: "success",
 
-        confirmButtonText: "รับชมสื่อการเรียนรู้"
+      confirmButtonText: "Whatching lession"
       },
       function(isConfirm){
         if (isConfirm) {
@@ -349,11 +349,11 @@ function bf(){
 
     setTimeout(function () { 
       swal({
-        title: "คะแนนหลังเรียน <?php echo $score ?> คะแนน",
+          title: "Your Score <?php echo $score ?> ",
 
         type: "success",
 
-        confirmButtonText: "ดูเฉลย"
+        confirmButtonText: "Answer"
       },
       function(isConfirm){
         if (isConfirm) {

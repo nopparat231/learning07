@@ -36,7 +36,7 @@ $totalRows_learning = mysqli_num_rows($learning);
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h1 class="text-center">คะแนนผู้ใช้งาน</h1>
+                <h1 class="text-center">User Score</h1>
                 <hr>
               </div>
 
@@ -54,60 +54,60 @@ $totalRows_learning = mysqli_num_rows($learning);
 
 
                       <thead class="thead-dark">
+                       <tr class="text-center">
+                        <th scope="col">No.</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Lesson</th>
+                        <th scope="col">Pre Test</th>
+                        <th scope="col">Post Test</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <?php
+                      $i = 1 ;
+                      do { ?>
+
+
                         <tr class="text-center">
-                          <th scope="col">ลำดับที่</th>
-                          <th scope="col">วันที่</th>
-                          <th scope="col">ชื่อ-นามสกุล</th>
-                          <th scope="col">บทเรียน</th>
-                          <th scope="col">คะแนนก่อนเรียน</th>
-                          <th scope="col">คะแนนหลังเรียน</th>
+                          <td><?php echo $i; ?></td>
+                          <td><?php echo date("d/m/Y" , strtotime($row_learning['user_learning_date'])); ?></td>
+                          <td><?php echo $row_learning['Firstname']. "  " .$row_learning['Lastname']; ?></td>
+                          <td><?php echo $row_learning['choice_name']; ?>
+                          <td><?php echo $row_learning['user_learning_bf']; ?></td>
+                          <td><?php echo $row_learning['user_learning_af']; ?></td>
                         </tr>
-                      </thead>
-                      <tbody>
 
-                        <?php
-                        $i = 1 ;
-                        do { ?>
+                        <?php 
+                        $i += 1;
+                      } while ($row_learning = mysqli_fetch_assoc($learning)); ?>
 
+                    </tbody>
+                  </table>
+                <?php }else {
+                  echo "<h3> ยังไม่มีคะแนน </h3>";
+                }
 
-                          <tr class="text-center">
-                            <td><?php echo $i; ?></td>
-                            <td><?php echo date("d/m/Y" , strtotime($row_learning['user_learning_date'])); ?></td>
-                            <td><?php echo $row_learning['Firstname']. "  " .$row_learning['Lastname']; ?></td>
-                            <td><?php echo $row_learning['choice_name']; ?>
-                            <td><?php echo $row_learning['user_learning_bf']; ?></td>
-                            <td><?php echo $row_learning['user_learning_af']; ?></td>
-                          </tr>
+                mysqli_free_result($learning);?>
 
-                          <?php 
-                          $i += 1;
-                        } while ($row_learning = mysqli_fetch_assoc($learning)); ?>
-
-                      </tbody>
-                    </table>
-                  <?php }else {
-                    echo "<h3> ยังไม่มีคะแนน </h3>";
-                  }
-
-                  mysqli_free_result($learning);?>
-
-                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12"></div>
-            </div>
+      </div>
+      <div class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12"></div>
           </div>
         </div>
       </div>
-      <div class="col-md-1"></div>
-
     </div>
+    <div class="col-md-1"></div>
+
   </div>
+</div>
 </div>
 </div>
 

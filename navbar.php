@@ -71,7 +71,7 @@
         <?php
 
         if (isset($_SESSION["Userlevel"]) == "M") {
-          echo "<a class='fa text-danger nav-link' href='logout.php'>ออกจากระบบ</a>";
+          echo "<a class='fa text-danger nav-link' href='logout.php'>Logout</a>";
 
         }else{   ?>
 

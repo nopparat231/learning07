@@ -51,7 +51,7 @@ $totalRows_watch = mysqli_num_rows($watch);
             <br>
             <button onclick="playVid()" type="button" id="play" class="btn btn-primary" style="display: none;">Play Video</button>
             <button onclick="pauseVid()" type="button" id="pause" class="btn btn-warning" style="display: none;">Pause Video</button>
-            <a href="choice.php?choice_id=<?php echo $row_watch['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff&cff=cff" type="button" class="btn btn-success" id="next" style="display: block;">ทำแบบทดสอบ</a>
+            <a href="choice.php?choice_id=<?php echo $row_watch['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff&cff=cff" type="button" hidden class="btn btn-success" id="next" style="display: block;">Post-test</a>
             <br> 
 
 
@@ -69,14 +69,20 @@ $totalRows_watch = mysqli_num_rows($watch);
                 <br>
                 <button onclick="playVid()" type="button" id="play" class="btn btn-primary">Play Video</button>
                 <button onclick="pauseVid()" type="button" id="pause" class="btn btn-warning">Pause Video</button>
-                <a href="choice.php?choice_id=<?php echo $row_watch['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff" type="button" class="btn btn-success" id="next" style="display: none;">ทำแบบทดสอบ</a>
+                <a href="choice.php?choice_id=<?php echo $row_watch['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff" type="button" hidden class="btn btn-success" id="next" style="display: none;">Post-test</a>
                 <br> 
 
 
 
               <?php endif ?>
 
+              <br>
 
+              <?php 
+
+              include 'choice_watch.php';
+
+              ?>
 
 
             <?php } ?>
