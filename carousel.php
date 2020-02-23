@@ -12,7 +12,7 @@
       <img class="d-block w-100" src="img/b2.png" alt="Second slide" height="250px">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/b3.jpg" alt="Third slide" height="250px">
+      <img class="d-block w-100" src="img/b4.jpg" alt="Third slide" height="250px">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
