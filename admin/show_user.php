@@ -12,14 +12,14 @@ $totalRows_user = mysqli_num_rows($user);
 
 ?>
 <?php include 'add_user.php';
- ?>
+?>
 <div class="col-md-12">
 	<div class="py-2">
 		<div class="container">
 			<div class="row" align="center">
 				<div class="col-md-12">
 					<a href="index.php" class="myButton" data-toggle='modal' data-target='#addMemModal'>+</a>
-			<!-- 		  <a href="index.php" class="myButton" data-toggle='modal' data-target='#EditChoiceModal'>+</a> -->
+					<!-- 		  <a href="index.php" class="myButton" data-toggle='modal' data-target='#EditChoiceModal'>+</a> -->
 				</div>
 			</div>
 		</div>
@@ -37,7 +37,9 @@ $totalRows_user = mysqli_num_rows($user);
 								<thead class="thead-dark">
 									<tr class="text-center">
 										<th scope="col" width="5">No.</th>
+										<th scope="col">Section</th>
 										<th scope="col">Username</th>
+										
 										<th scope="col">Name</th>
 										<th scope="col">Info.</th>
 										<!-- <th scope="col">วันหมดอายุ</th> -->
@@ -51,16 +53,26 @@ $totalRows_user = mysqli_num_rows($user);
 
 									<?php
 									$i = 1 ;
-									do { ?>
+									do {
+
+										$query_group = "SELECT * FROM user_group WHERE g_id = ".$row_user['group_id'];
+										$group = mysqli_query($con,$query_group) or die(mysqli_error());
+										$row_group = mysqli_fetch_assoc($group);
+										$totalRows_group = mysqli_num_rows($group);
+
+
+										?>
 
 
 										<tr class="text-center">
 
 											<td><?php echo $i ?></td>
+											<td><?php echo $row_group['g_session']; ?></td>
 											<td><?php echo $row_user['Username']; ?></td>
+											
 											<td><?php echo $row_user['Firstname'] . "  " . $row_user['Lastname']; ?></td>
 											<td class="text-left"><?php echo " Phone : " . $row_user['phone'] . " <br /> E-mail : " . $row_user['email']; ?></td>
-									
+
 											<td>
 												<?php 
 

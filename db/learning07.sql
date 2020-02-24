@@ -1,22 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
--- https://www.phpmyadmin.net/
+-- version 4.2.11
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2020 at 05:54 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.26
+-- Generation Time: Feb 24, 2020 at 04:04 PM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `learning07`
@@ -28,13 +26,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `choice`
 --
 
-CREATE TABLE `choice` (
-  `choice_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `choice` (
+`choice_id` int(11) NOT NULL,
   `choice_name` varchar(100) NOT NULL,
   `video` varchar(300) NOT NULL,
   `choice_detail` varchar(100) NOT NULL,
   `choice_status` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `choice`
@@ -50,17 +48,17 @@ INSERT INTO `choice` (`choice_id`, `choice_name`, `video`, `choice_detail`, `cho
 -- Table structure for table `testing`
 --
 
-CREATE TABLE `testing` (
-  `id` int(3) NOT NULL,
+CREATE TABLE IF NOT EXISTS `testing` (
+`id` int(3) NOT NULL,
   `choice_id` int(10) NOT NULL,
   `question` varchar(1500) NOT NULL DEFAULT '',
   `c1` varchar(1500) NOT NULL DEFAULT '',
   `c2` varchar(1500) NOT NULL DEFAULT '',
   `c3` varchar(1500) NOT NULL DEFAULT '',
   `c4` varchar(1500) NOT NULL DEFAULT '',
-  `answer` int(1) NOT NULL DEFAULT 0,
+  `answer` int(1) NOT NULL DEFAULT '0',
   `status` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `testing`
@@ -84,7 +82,7 @@ INSERT INTO `testing` (`id`, `choice_id`, `question`, `c1`, `c2`, `c3`, `c4`, `a
 (15, 28, 'ข้อใดคืองานอดิเรกที่เหมะสมกับผู้สูงอายุมากที่สุด', 'ดูแลสวนหรือต้นไม้', 'ขับมอเตอร์ไซค์ชมวิว', 'วิ่งออกกำลังกาย 10 กิโลเมตรในช่วงเที่ยง', 'ดื่มสุราสังสรรค์กับเพื่อน', 1, 0),
 (16, 28, 'ข้อใด ไม่ใช่ การสร้างความรู้สึกมีคุณค่าให้กับผู้สูงอายุ', 'การขอคำปรึกษาในเรื่องการเลี้ยงลูก', 'การขอคำปรึกษาในเรื่องการดูแลบ้าน', 'การขอคำปรึกษาในเรื่องการกู้เงิน', 'การขอคำปรึกษาในเรื่องการทำอาหาร', 3, 0),
 (17, 28, 'asdas', 'dasdsad', 'asd', 'asd', 'asd', 2, 0),
-(19, 28, '<h2><strong>test&nbsp;<img src=\"http://localhost/learning07/admin/source/11.png\" alt=\"\" width=\"128\" height=\"128\" />&nbsp;asdsd</strong></h2>', 'asd', 'asd', 'asdd', 'asd', 2, 0);
+(19, 28, '<h2><strong>test&nbsp;<img src="http://localhost/learning07/admin/source/11.png" alt="" width="128" height="128" />&nbsp;asdsd</strong></h2>', 'asd', 'asd', 'asdd', 'asd', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -92,8 +90,8 @@ INSERT INTO `testing` (`id`, `choice_id`, `question`, `c1`, `c2`, `c3`, `c4`, `a
 -- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
-  `ID` int(5) NOT NULL,
+CREATE TABLE IF NOT EXISTS `user` (
+`ID` int(5) NOT NULL,
   `Username` varchar(50) NOT NULL,
   `Password` varchar(200) NOT NULL,
   `Firstname` varchar(100) NOT NULL,
@@ -104,19 +102,42 @@ CREATE TABLE `user` (
   `user_date` date NOT NULL,
   `user_stid` int(11) NOT NULL,
   `session_id` varchar(50) NOT NULL,
+  `group_id` int(20) NOT NULL,
   `Status` varchar(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`ID`, `Username`, `Password`, `Firstname`, `Lastname`, `email`, `phone`, `Userlevel`, `user_date`, `user_stid`, `session_id`, `Status`) VALUES
-(48, 'user', 'Aa123456', 'ทดสอบ', 'User', 'User@gmail.com', '0834565129', 'M', '2020-03-31', 2123332222, 'fdc1e278676cd8877f58ab2b0c3dc5c6', 'Y'),
-(44, 'admin', 'Aa123456', 'ทดสอบ', 'GGMM', 'admin@gmail.com', '0832215453', 'A', '2020-03-31', 2147483647, 'fdc1e278676cd8877f58ab2b0c3dc5c6', 'Y'),
-(47, 'user1', 'Aa1234561', 'User1', 'User', 'User@gmail.com', '8888888888', 'M', '2020-03-31', 2147483647, 'fdc1e278676cd8877f58ab2b0c3dc5c6', 'Y'),
-(49, 'nopp', 'Nn123456', 'Noppa', 'buss', '23.noop@gmail.com', '0982132155', 'M', '2021-08-16', 2147483647, 'nhdf4vd3c1p7kl3r26lto2eeb2', 'N'),
-(50, 'dasdasdsa', 'Aa123123', 'asdasd', 'asdasd', 'asdasd@sads.df', '0578454212', 'M', '2021-09-22', 2147483647, 'pap9ced2jbggbbm9ui42bjliv0', 'N');
+INSERT INTO `user` (`ID`, `Username`, `Password`, `Firstname`, `Lastname`, `email`, `phone`, `Userlevel`, `user_date`, `user_stid`, `session_id`, `group_id`, `Status`) VALUES
+(48, 'user', 'Aa123456', 'ทดสอบ', 'User', 'User@gmail.com', '0834565129', 'M', '2020-03-31', 2123332222, 'fdc1e278676cd8877f58ab2b0c3dc5c6', 1, 'Y'),
+(44, 'admin', 'Aa123456', 'ทดสอบ', 'GGMM', 'admin@gmail.com', '0832215453', 'A', '2020-03-31', 2147483647, 'fdc1e278676cd8877f58ab2b0c3dc5c6', 2, 'Y'),
+(47, 'user1', 'Aa1234561', 'User1', 'User', 'User@gmail.com', '8888888888', 'M', '2020-03-31', 2147483647, 'fdc1e278676cd8877f58ab2b0c3dc5c6', 1, 'Y'),
+(49, 'nopp', 'Nn123456', 'Noppa', 'buss', '23.noop@gmail.com', '0982132155', 'M', '2021-08-16', 2147483647, 'nhdf4vd3c1p7kl3r26lto2eeb2', 1, 'N'),
+(50, 'dasdasdsa', 'Aa123123', 'asdasd', 'asdasd', 'asdasd@sads.df', '0578454212', 'M', '2021-09-22', 2147483647, 'pap9ced2jbggbbm9ui42bjliv0', 2, 'N');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_group`
+--
+
+CREATE TABLE IF NOT EXISTS `user_group` (
+`g_id` int(11) NOT NULL,
+  `g_session` varchar(200) NOT NULL,
+  `g_date` date NOT NULL,
+  `g_term` int(20) NOT NULL,
+  `g_status` int(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user_group`
+--
+
+INSERT INTO `user_group` (`g_id`, `g_session`, `g_date`, `g_term`, `g_status`) VALUES
+(1, '1/2018', '2018-08-31', 1, 0),
+(2, '2/2018', '2018-11-15', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -124,16 +145,16 @@ INSERT INTO `user` (`ID`, `Username`, `Password`, `Firstname`, `Lastname`, `emai
 -- Table structure for table `user_learning`
 --
 
-CREATE TABLE `user_learning` (
-  `user_learning_id` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `user_learning` (
+`user_learning_id` int(10) NOT NULL,
   `choice_id` int(10) NOT NULL,
   `user_id` int(10) NOT NULL,
   `user_learning_bf` int(20) NOT NULL,
   `user_learning_wa` int(20) NOT NULL,
   `user_learning_af` varchar(20) NOT NULL,
   `user_learning_status` int(1) NOT NULL,
-  `user_learning_date` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `user_learning_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user_learning`
@@ -149,14 +170,14 @@ INSERT INTO `user_learning` (`user_learning_id`, `choice_id`, `user_id`, `user_l
 -- Table structure for table `user_testing`
 --
 
-CREATE TABLE `user_testing` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `user_testing` (
+`id` int(11) NOT NULL,
   `testing_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `user_anw` int(11) NOT NULL,
   `user_bf` varchar(11) NOT NULL,
   `status` int(11) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -167,31 +188,37 @@ CREATE TABLE `user_testing` (
 -- Indexes for table `choice`
 --
 ALTER TABLE `choice`
-  ADD PRIMARY KEY (`choice_id`);
+ ADD PRIMARY KEY (`choice_id`);
 
 --
 -- Indexes for table `testing`
 --
 ALTER TABLE `testing`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`ID`);
+ ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `user_group`
+--
+ALTER TABLE `user_group`
+ ADD PRIMARY KEY (`g_id`);
 
 --
 -- Indexes for table `user_learning`
 --
 ALTER TABLE `user_learning`
-  ADD PRIMARY KEY (`user_learning_id`);
+ ADD PRIMARY KEY (`user_learning_id`);
 
 --
 -- Indexes for table `user_testing`
 --
 ALTER TABLE `user_testing`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -201,33 +228,32 @@ ALTER TABLE `user_testing`
 -- AUTO_INCREMENT for table `choice`
 --
 ALTER TABLE `choice`
-  MODIFY `choice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
+MODIFY `choice_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `testing`
 --
 ALTER TABLE `testing`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
+MODIFY `id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
-
+MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=51;
+--
+-- AUTO_INCREMENT for table `user_group`
+--
+ALTER TABLE `user_group`
+MODIFY `g_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `user_learning`
 --
 ALTER TABLE `user_learning`
-  MODIFY `user_learning_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
+MODIFY `user_learning_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `user_testing`
 --
 ALTER TABLE `user_testing`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
