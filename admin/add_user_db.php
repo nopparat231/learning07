@@ -19,7 +19,8 @@ $Password = $_REQUEST["Password"];
 $email = $_REQUEST["email"];
 $phone = $_REQUEST["phone"];
 $user_stid = $_REQUEST["user_stid"];
-$Userlevel = $_REQUEST["Userlevel"];;
+$Userlevel = $_REQUEST["Userlevel"];
+$group = $_REQUEST["session"];
 $Status = "Y";
 $session_id = session_id();
 
@@ -77,8 +78,8 @@ if ($numemail > 0 ){ ?>
   //เพิ่มเข้าไปในฐานข้อมูล
       $d = date("Y-m-d");
       $user_date = date('Y-m-d', strtotime('+2 years', strtotime($d)));
-      $sql = "INSERT INTO user (Firstname, Lastname, Username, Password, email ,phone , Userlevel , user_date ,   user_stid , session_id ,  Status)
-      VALUES('$Firstname', '$Lastname', '$Username', '$Password', '$email' , '$phone' , '$Userlevel'  , '$user_date', '$user_stid' , '$session_id', '$Status')";
+      $sql = "INSERT INTO user (Firstname, Lastname, Username, Password, email ,phone , Userlevel , user_date ,   user_stid , session_id , group_id ,  Status)
+      VALUES('$Firstname', '$Lastname', '$Username', '$Password', '$email' , '$phone' , '$Userlevel'  , '$user_date', '$user_stid' , '$session_id', '$group' , '$Status')";
 
       $result1 = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
       //$ID = mysqli_insert_id($con) or die ("Error in query: $sql " . mysqli_error());

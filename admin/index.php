@@ -44,6 +44,7 @@ if(session_status() == PHP_SESSION_NONE){
         $sc = isset($_REQUEST['sc']);
         $sco = isset($_REQUEST['sco']);
         $send = isset($_REQUEST['send']);
+        $sio = isset($_REQUEST['sio']);
 
         if ($in <> '') {
           include 'index_scoreall.php';
@@ -64,6 +65,8 @@ if(session_status() == PHP_SESSION_NONE){
         include 'show_user_anwshow.php';
       }elseif ($eu <> '') {
         include 'edit_user.php';
+      }elseif ($sio <> '') {
+        include 'show_session.php';
       }elseif ($ec <> '') {
         include 'edit_choice.php';
         echo "<br><br><br><br><br><br><br><br>";
@@ -150,6 +153,22 @@ if ($id <> '') {
 
   </script>
 
+<?php } ?>
+
+<?php if (isset($_GET['session_id'])) {
+include 'edit_session.php';
+
+?>
+
+ <script type="text/javascript">
+
+    //onload show modal script ชุดนี้โหลดมาตรงๆ ไม่มีหน่วงเวลานะ
+    $(document).ready(function(){
+      $("#editsessionModal").modal('show');
+    });
+    
+
+  </script>
 <?php } ?>
 
 

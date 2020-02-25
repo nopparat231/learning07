@@ -10,7 +10,7 @@ $totalRows_cc = mysqli_num_rows($cc);
 ?>
 <body>
 
-<script src="tinymce/tinymce.min.js"></script>
+  <script src="tinymce/tinymce.min.js"></script>
 
   <form action="add_choice_sub_db.php" method="post">
 
@@ -47,86 +47,86 @@ $totalRows_cc = mysqli_num_rows($cc);
           <div class="form-group row"> 
             <label for="inputmailh" class="col-1 col-form-label">Question</label>
             <div class="col-11">
-            <!--   <input type="text" class="form-control" id="question" name="question" required="required" placeholder="Question">  -->
+              <!--   <input type="text" class="form-control" id="question" name="question" required="required" placeholder="Question">  -->
 
-   <textarea class="form-control" id="question" name="question" placeholder="Question" ></textarea> 
+              <textarea class="form-control" id="question" name="question" placeholder="Question" ></textarea> 
 
             </div>
-            </div>
+          </div>
 
-            <div class="form-group row"> 
-              <label for="inputmailh" class="col-1 col-form-label">1 ).</label>
+          <div class="form-group row"> 
+            <label for="inputmailh" class="col-1 col-form-label">1 ).</label>
+            <div class="col-5">
+              <input type="text" class="form-control" id="c1" name="c1"  required="required" placeholder="Question 1"> </div>
+
+              <label for="inputmailh" class="col-1 col-form-label">2 ).</label>
               <div class="col-5">
-                <input type="text" class="form-control" id="c1" name="c1"  required="required" placeholder="Question 1"> </div>
+                <input type="text" class="form-control" id="c2" name="c2"  required="required" placeholder="Question 2"> </div>
 
-                <label for="inputmailh" class="col-1 col-form-label">2 ).</label>
+              </div>
+
+              <div class="form-group row"> 
+
+                <label for="inputmailh" class="col-1 col-form-label">3 ).</label>
                 <div class="col-5">
-                  <input type="text" class="form-control" id="c2" name="c2"  required="required" placeholder="Question 2"> </div>
+                  <input type="text" class="form-control" id="c3" name="c3"  required="required" placeholder="Question 3"> </div>
 
-                </div>
-
-                <div class="form-group row"> 
-
-                  <label for="inputmailh" class="col-1 col-form-label">3 ).</label>
+                  <label for="inputmailh" class="col-1 col-form-label">4 ).</label>
                   <div class="col-5">
-                    <input type="text" class="form-control" id="c3" name="c3"  required="required" placeholder="Question 3"> </div>
+                    <input type="text" class="form-control" id="c4" name="c4"  required="required" placeholder="Question 4"> </div>
 
-                    <label for="inputmailh" class="col-1 col-form-label">4 ).</label>
+                  </div>
+
+
+                  <div class="form-group row"> 
+                    <label for="inputmailh" class="col-1 col-form-label">Answer</label>
                     <div class="col-5">
-                      <input type="text" class="form-control" id="c4" name="c4"  required="required" placeholder="Question 4"> </div>
-
+                      <input type="number" class="form-control" id="input-num" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "1" minlength="1" onkeyup="num();" name="answer"  required="required" placeholder="Answer Ex. 1 , 2 , 3 , 4" /> </div>
                     </div>
 
 
-                      <div class="form-group row"> 
-                        <label for="inputmailh" class="col-1 col-form-label">Answer</label>
-                        <div class="col-5">
-                          <input type="number" class="form-control" id="input-num" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "1" minlength="1" onkeyup="num();" name="answer"  required="required" placeholder="Answer Ex. 1 , 2 , 3 , 4" /> </div>
-                        </div>
-
-
-                      </div>
-                      <div class="modal-footer"> 
-                        <button type="submit" class="btn btn-primary">Confirm</button> 
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                      </div>
-
-                    </form>
-
                   </div>
-                </div>
+                  <div class="modal-footer"> 
+                    <button type="submit" class="btn btn-primary">Confirm</button> 
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                  </div>
+
+                </form>
+
               </div>
-            </form>
+            </div>
+          </div>
+        </form>
 
 
-          </body>
+      </body>
 
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-          <script type="text/javascript">
+      <script type="text/javascript">
 
-            function num() {
-              var element = document.getElementById('input-num');
-              element.value = element.value.replace(/[^1-4]+/, '');
-            };
+        function num() {
+          var element = document.getElementById('input-num');
+          element.value = element.value.replace(/[^1-4]+/, '');
+        };
 
-            tinymce.init({
-    selector: "textarea",theme: "modern",width: 680,height: 300,
-    plugins: [
-         "advlist autolink link image lists charmap print preview hr anchor pagebreak",
-         "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
-         "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
-   ],
-   toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
-   toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
-   image_advtab: true ,
-   
-   external_filemanager_path:"./filemanager/",
-   filemanager_title:"Responsive Filemanager" ,
-   external_plugins: { "filemanager" : "../filemanager/plugin.min.js"}
-   ,relative_urls:false,
-   remove_script_host:false,
-   document_base_url:"http://localhost/tiny"
- });
-          </script>
+        tinymce.init({
+          selector: "textarea",theme: "modern",width: 680,height: 300,
+          plugins: [
+          "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+          "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+          "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
+          ],
+          toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+          toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+          image_advtab: true ,
+
+          external_filemanager_path:"./filemanager/",
+          filemanager_title:"Responsive Filemanager" ,
+          external_plugins: { "filemanager" : "../filemanager/plugin.min.js"}
+          ,relative_urls:false,
+          remove_script_host:false,
+          document_base_url:"http://localhost/tiny"
+        });
+      </script>

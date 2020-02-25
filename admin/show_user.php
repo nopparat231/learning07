@@ -19,7 +19,7 @@ $totalRows_user = mysqli_num_rows($user);
 			<div class="row" align="center">
 				<div class="col-md-12">
 					<a href="index.php" class="myButton" data-toggle='modal' data-target='#addMemModal'>+</a>
-					<a href="index.php" class="myButton" data-toggle='modal' data-target='#addMemModal'>+</a>
+					<!-- <a href="index.php" class="myButton" data-toggle='modal' data-target='#addMemModal'>+</a> -->
 					<!-- 		  <a href="index.php" class="myButton" data-toggle='modal' data-target='#EditChoiceModal'>+</a> -->
 				</div>
 			</div>

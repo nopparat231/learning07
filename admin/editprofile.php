@@ -69,11 +69,31 @@ $num = mysqli_fetch_assoc($result);
               <tr>
 
 
-                <td>Number</td>
+                <td>Session</td>
                 <td>
-                  <input type="number" class="form-control" id="input-num-id" name="stid" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" minlength="10" required="required"  value="<?php echo($num['user_stid'])?>" 
-                  onkeyup="numid();">
+
+                  <select class="custom-select" name="session" style="width: 210px">
+
+                    <?php 
+
+
+                    $query_group1 = "SELECT * FROM user_group";
+                    $group1 = mysqli_query($con,$query_group1) or die(mysqli_error());
+                    $row_group1 = mysqli_fetch_assoc($group1);
+                    $totalRows_group1 = mysqli_num_rows($group1);
+
+                    do {
+
+
+                      ?>
+
+                      <option  value="<?php echo $row_group1['g_id']; ?>"><?php echo $row_group1['g_session']; ?></option>
+
+
+                    <?php } while ($row_group1 = mysqli_fetch_assoc($group1)); ?>
+                  </select>
                 </td>
+                
                 <td></td>
 
                 <td>Group</td>

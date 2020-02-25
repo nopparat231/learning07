@@ -20,6 +20,7 @@ $email = $_REQUEST["email"];
 $phone = $_REQUEST["phone"];
 $user_stid = $_REQUEST["user_stid"];
 $Userlevel = $_REQUEST["Userlevel"];
+$session = $_REQUEST["session"];
 $Status = "N";
 $session_id = session_id();
 
@@ -77,8 +78,8 @@ if ($numemail > 0 ){ ?>
 	//เพิ่มเข้าไปในฐานข้อมูล
       $d = date("Y-m-d");
       $user_date = date('Y-m-d', strtotime('+2 years', strtotime($d)));
-			$sql = "INSERT INTO user (Firstname, Lastname, Username, Password, email ,phone , Userlevel , user_date ,   user_stid , session_id ,  Status)
-			VALUES('$Firstname', '$Lastname', '$Username', '$Password', '$email' , '$phone' , '$Userlevel'  , '$user_date', '$user_stid' , '$session_id', '$Status')";
+			$sql = "INSERT INTO user (Firstname, Lastname, Username, Password, email ,phone , Userlevel , user_date ,   user_stid , session_id , session ,  Status)
+			VALUES('$Firstname', '$Lastname', '$Username', '$Password', '$email' , '$phone' , '$Userlevel'  , '$user_date', '$user_stid' , '$session_id', '$session' , '$Status')";
 
 			$result1 = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
 			$ID = mysqli_insert_id($con) or die ("Error in query: $sql " . mysqli_error());
@@ -94,9 +95,9 @@ if ($numemail > 0 ){ ?>
 
      ini_set( 'display_errors', 1 );
      error_reporting( E_ALL );
-     $from = "education@shpjm.com";
+     $from = "education@learningroom.com";
      $to = $email;
-     $subject = "Activate user account education.shpjm.com";
+     $subject = "Activate user account learningroom.net";
      $message = $massage;
      $headers = "From:" . $from . "\r\n";
      $headers .= "Content-Type: text/html; charset=utf-8\r\n";

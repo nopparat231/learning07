@@ -54,6 +54,36 @@
   </div><font color="red" size="5">*</font>
 </div>
 
+<div class="form-group row">
+  <label class="col-2">Session<br></label>
+  <div class="col-9">
+    <div class="input-group">
+
+      <select class="custom-select" name="session" style="width: 210px">
+
+        <?php 
+
+        include 'conn.php';
+        $query_group1 = "SELECT * FROM user_group";
+        $group1 = mysqli_query($con,$query_group1) or die(mysqli_error());
+        $row_group1 = mysqli_fetch_assoc($group1);
+        $totalRows_group1 = mysqli_num_rows($group1);
+
+        do {
+
+
+          ?>
+
+          <option  value="<?php echo $row_group1['g_id']; ?>"><?php echo $row_group1['g_session']; ?></option>
+
+
+        <?php } while ($row_group1 = mysqli_fetch_assoc($group1)); ?>
+      </select>
+    </div>
+  </div><font color="red" size="5">*</font>
+</div>
+
+
 <!-- <div class="form-group row"> <label for="inputmailh" class="col-2 col-form-label">Namber</label>
   <div class="col-9">
     <input type="number" name="user_stid" class="form-control" id="user_stid" required="กรุณากรอกรหัสให้ครบ" placeholder="กรุณากรอกรหัสประจำตัว" autocomplete="off" title="กรุณากรอกรหัสให้ครบ" />
@@ -81,7 +111,7 @@
     <div class="row">
       <div class="col-md-12 text-center">
         <button name="btn" class="btn text-light mx-1" style="background-color: #581845">Confirm registration
-</button>
+        </button>
         <!-- <a class="btn btn-danger text-light mx-1" href="index.php">ยกเลิก</a> -->
       </div>
     </div>

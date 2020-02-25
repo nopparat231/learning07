@@ -57,11 +57,6 @@
               <tr>
 
 
-                <td>Number</td>
-                <td>
-                  <input type="number" class="form-control" id="input-num-id" name="user_stid" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" minlength="10" autocomplete="off"  required="required" onkeyup="numid();" placeholder="กรุณากรอกรหัสประจำตัว" >
-                </td>
-                <td></td>
 
                 <td>Group</td>
                 <td>
@@ -74,35 +69,61 @@
 
                  </select>
                </td>
-             </tr>
+               <td></td>
+
+               <td>Session</td>
+               <td>
+
+                <select class="custom-select" name="session" style="width: 210px">
+
+                  <?php 
 
 
-           </tbody>
-           <tfoot>
-             <tr> 
-               <td></td>
-               <td></td>
-               <td> 
-                 &nbsp; 
-               </td>
-               <td> 
-                &nbsp; 
+                    $query_group1 = "SELECT * FROM user_group";
+                    $group1 = mysqli_query($con,$query_group1) or die(mysqli_error());
+                    $row_group1 = mysqli_fetch_assoc($group1);
+                    $totalRows_group1 = mysqli_num_rows($group1);
+
+                  do {
+
+
+                    ?>
+
+                    <option  value="<?php echo $row_group1['g_id']; ?>"><?php echo $row_group1['g_session']; ?></option>
+
+
+                  <?php } while ($row_group1 = mysqli_fetch_assoc($group1)); ?>
+                </select>
               </td>
             </tr>
 
-          </tfoot>
 
-        </table>
+          </tbody>
+          <tfoot>
+           <tr> 
+             <td></td>
+             <td></td>
+             <td> 
+               &nbsp; 
+             </td>
+             <td> 
+              &nbsp; 
+            </td>
+          </tr>
 
-      </div>
+        </tfoot>
+
+      </table>
 
     </div>
-  </div>
 
-  <div class="modal-footer"> 
-    <button type="submit" class="btn btn-primary">ยืนยัน</button> 
-    <button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
   </div>
+</div>
+
+<div class="modal-footer"> 
+  <button type="submit" class="btn btn-primary">ยืนยัน</button> 
+  <button type="button" class="btn btn-danger" data-dismiss="modal">ยกเลิก</button>
+</div>
 </div>
 </div>
 </div>
