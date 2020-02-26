@@ -17,8 +17,8 @@ $Password = $_REQUEST["Password"];
 $email = $_REQUEST["email"];
 $phone = $_REQUEST["phone"];
 $id = $_REQUEST["id"];
-$stid = $_REQUEST["stid"];
-
+//$stid = $_REQUEST["stid"];
+//$session = $_REQUEST["session"];
 
 
 $sql ="UPDATE user SET 
@@ -26,7 +26,6 @@ Firstname='$Firstname',
 Lastname='$Lastname',
 Password='$Password',
 email='$email',
-user_stid='$stid',
 phone='$phone'
 WHERE id=$id
 ";

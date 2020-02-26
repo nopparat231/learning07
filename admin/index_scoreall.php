@@ -30,7 +30,7 @@ $totalRows_learning = mysqli_num_rows($learning);
             <thead class="thead-dark">
               <tr class="text-center">
                 <th scope="col">No.</th>
-                <th scope="col">Date</th>
+                <th scope="col">Studen Code</th>
                 <th scope="col">Name</th>
                 <th scope="col">Lesson</th>
                 <th scope="col">Pre Test</th>
@@ -47,7 +47,7 @@ $totalRows_learning = mysqli_num_rows($learning);
 
                 <tr class="text-center">
                   <td><?php echo $i; ?></td>
-                  <td><?php echo date("d/m/Y" , strtotime($row_learning['user_learning_date'])); ?></td>
+                  <td><?php echo $row_learning['Username']; ?></td>
                   <td><?php echo $row_learning['Firstname']. "  " .$row_learning['Lastname']; ?></td>
                   <td><?php echo $row_learning['choice_name']; ?>
                   <td><?php echo $row_learning['user_learning_bf']; ?></td>

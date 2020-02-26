@@ -20,9 +20,10 @@ $totalRows_learning = mysqli_num_rows($learning);
   <div class="row">
     <div class="col-md-12">
       <?php include 'carousel.php'; ?>
+
       <?php include 'navbar.php'; ?>
       <?php include 'model.php'; ?>
-
+ 
 
       <div class="row">
         <div class="col-md-1"></div>
@@ -47,11 +48,10 @@ $totalRows_learning = mysqli_num_rows($learning);
                   <?php if ($totalRows_learning > 0) {?>
                     <table class="table table-hover" id="example" bgcolor="white">
 
-
-                      <thead class="thead-dark">
+                       <thead class="thead-dark">
                        <tr class="text-center">
                         <th scope="col">No.</th>
-                        <th scope="col">Date</th>
+                        <th scope="col">Studen Code</th>
                         <th scope="col">Name</th>
                         <th scope="col">Lesson</th>
                         <th scope="col">Pre Test</th>
@@ -68,7 +68,7 @@ $totalRows_learning = mysqli_num_rows($learning);
 
                         <tr class="text-center">
                           <td><?php echo $i; ?></td>
-                          <td><?php echo date("d/m/Y" , strtotime($row_learning['user_learning_date'])); ?></td>
+                          <td><?php echo $row_learning['Username']; ?></td>
                           <td><?php echo $row_learning['Firstname']. "  " .$row_learning['Lastname']; ?></td>
                           <td><?php echo $row_learning['choice_name']; ?>
                           <td><?php echo $row_learning['user_learning_bf']; ?></td>

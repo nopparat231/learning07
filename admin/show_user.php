@@ -11,7 +11,10 @@ $totalRows_user = mysqli_num_rows($user);
 
 
 ?>
-<?php include 'add_user.php';
+<?php 
+include 'add_user.php';
+include 'add_user_all.php';
+
 ?>
 <div class="col-md-12">
 	<div class="py-2">
@@ -19,7 +22,7 @@ $totalRows_user = mysqli_num_rows($user);
 			<div class="row" align="center">
 				<div class="col-md-12">
 					<a href="index.php" class="myButton" data-toggle='modal' data-target='#addMemModal'>+</a>
-					<!-- <a href="index.php" class="myButton" data-toggle='modal' data-target='#addMemModal'>+</a> -->
+					<a href="index.php" class="myButton" data-toggle='modal' data-target='#addMemAllModal'>Excel</a>
 					<!-- 		  <a href="index.php" class="myButton" data-toggle='modal' data-target='#EditChoiceModal'>+</a> -->
 				</div>
 			</div>
