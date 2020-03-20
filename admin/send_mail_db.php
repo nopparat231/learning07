@@ -14,10 +14,10 @@ if (isset($_POST['m']) <> '') {
 
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
-    $from = "sharelea@sharelearningmedia.com";
+    $from = "CC@learningroom.net";
     $to = $row['email'];
     
-    $subject = "sharelearningmedia.com";
+    $subject = "learningroom.net";
     $message = $massage;
     $headers = "From:" . $from . "\r\n";
     // $headers .= "Bcc:" . $bcc . "\r\n";
@@ -26,12 +26,12 @@ if (isset($_POST['m']) <> '') {
   }
   if ($mailsend) {
     echo "<script>";
-    echo "alert(\" ส่งเมล์ให้ User สำเร็จ \");"; 
+    echo "alert(\"  Send Mail To User Success \");"; 
     echo "window.location ='index.php';";
     echo "</script>";
   }else{
     echo "<script>";
-    echo "alert(\" ส่งเมล์ให้ User ไม่สำเร็จ \");"; 
+    echo "alert(\" Error \");"; 
     echo "window.location ='index.php';";
     echo "</script>";
   }
@@ -50,10 +50,10 @@ if (isset($_POST['m']) <> '') {
 
   ini_set( 'display_errors', 1 );
   error_reporting( E_ALL );
-  $from = "sharelea@sharelearningmedia.com";
+  $from = "CC@learningroom.net";
   $to = $row['email'];
 
-  $subject = "sharelearningmedia.com";
+  $subject = "learningroom.net";
   $message = $massage;
   $headers = "From:" . $from . "\r\n";
     // $headers .= "Bcc:" . $bcc . "\r\n";
@@ -62,12 +62,12 @@ if (isset($_POST['m']) <> '') {
 }
   if ($mailsend) {
     echo "<script>";
-    echo "alert(\" ส่งเมล์ให้ Admin สำเร็จ \");"; 
+    echo "alert(\"  Send Mail To Admin Success \");"; 
     echo "window.location ='index.php';";
     echo "</script>";
   }else{
     echo "<script>";
-    echo "alert(\" ส่งเมล์ให้ Admin ไม่สำเร็จ \");"; 
+    echo "alert(\" Error \");"; 
     echo "window.location ='index.php';";
     echo "</script>";
   }
@@ -86,10 +86,10 @@ if (isset($_POST['m']) <> '') {
 
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
-    $from = "sharelea@sharelearningmedia.com";
+    $from = "CC@learningroom.net";
     $to = $row['email'];
     
-    $subject = "sharelearningmedia.com";
+    $subject = "learningroom.net";
     $message = $massage;
     $headers = "From:" . $from . "\r\n";
     // $headers .= "Bcc:" . $bcc . "\r\n";
@@ -98,12 +98,12 @@ if (isset($_POST['m']) <> '') {
   }
     if ($mailsend) {
     echo "<script>";
-    echo "alert(\" ส่งเมล์ให้ทุกคนสำเร็จ \");"; 
+    echo "alert(\"  Send Mail To All User Success \");"; 
     echo "window.location ='index.php';";
     echo "</script>";
   }else{
     echo "<script>";
-    echo "alert(\" ส่งเมล์ให้ทุกคนไม่สำเร็จ \");"; 
+    echo "alert(\" Error \");"; 
     echo "window.location ='index.php';";
     echo "</script>";
   }

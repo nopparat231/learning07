@@ -20,6 +20,7 @@
       <li class="nav-item"> <a class="nav-link" href="index.php?su">Edit User</a> </li>
       <li class="nav-item"> <a class="nav-link" href="index.php?sc">Edit Lesson</a> </li>
        <li class="nav-item"> <a class="nav-link" href="index.php?sio">Edit Session</a> </li>
+       <li class="nav-item"> <a class="nav-link" href="index.php?send">Send Mail</a> </li>
 
 
     </ul>
