@@ -36,7 +36,7 @@ $num = mysqli_fetch_assoc($result);
               <div class="container">
                 <div class="row">
                   <div class="col-md-12 text-center">
-                    <button name="m" type="sub" class="btn btn-primary text-light mx-1" >All User</button>
+                    <button name="m" type="sub" class="btn btn-primary text-light mx-1" >User</button>
                     <button name="a" type="btn" class="btn btn-primary text-light mx-1" >Admin</button>
                     <button name="am" type="btn" class="btn btn-primary text-light mx-1" >User & admin</button>
 

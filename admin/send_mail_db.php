@@ -6,8 +6,10 @@ if (isset($_POST['m']) <> '') {
 
   $massage = $_POST['massage'];
   include('../conn.php');
-  $checkemail = "SELECT Userlevel,email FROM user WHERE Userlevel = 'M'";
+  include '../PHPMailer/sent.php';
+  $checkemail = "SELECT Userlevel,email FROM user WHERE email <> '' AND Userlevel = 'M'";
   $resultemail = mysqli_query($con,$checkemail);
+  $numrow = mysqli_num_rows($resultemail);
 
   while ($row = mysqli_fetch_array($resultemail)) 
   {
@@ -21,20 +23,39 @@ if (isset($_POST['m']) <> '') {
     $message = $massage;
     $headers = "From:" . $from . "\r\n";
     // $headers .= "Bcc:" . $bcc . "\r\n";
-    $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-    $mailsend = mail($to,$subject,$message, $headers);
+    // $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+    // $mailsend = mail($to,$subject,$message, $headers);
+
+
+
+    $mail->IsHTML(true);
+    $mail->CharSet = "text/html; charset=UTF-8;";
+    $mail->setFrom($from);
+    $mail->addAddress($to);
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+
+    //$mail->send();
+
+echo "<script>";
+  echo "alert(\" $to; Send Mail To User Success\");"; 
+  //echo "window.location ='index.php';";
+  echo "</script>";
+
+
+
+    //echo "<script>";
+    //echo "alert(\" $to; Send Mail To User Success \");"; 
+    //echo "window.location ='index.php';";
+    //echo "</script>";
+
+
   }
-  if ($mailsend) {
+//break;
     echo "<script>";
     echo "alert(\"  Send Mail To User Success \");"; 
     echo "window.location ='index.php';";
     echo "</script>";
-  }else{
-    echo "<script>";
-    echo "alert(\" Error \");"; 
-    echo "window.location ='index.php';";
-    echo "</script>";
-  }
 
 
 
@@ -42,7 +63,8 @@ if (isset($_POST['m']) <> '') {
 
  $massage = $_POST['massage'];
  include('../conn.php');
- $checkemail = "SELECT Userlevel,email FROM user WHERE Userlevel = 'A'";
+ include '../PHPMailer/sent.php';
+ $checkemail = "SELECT Userlevel,email FROM user WHERE Userlevel = 'A' AND email <> ''";
  $resultemail = mysqli_query($con,$checkemail);
 
  while ($row = mysqli_fetch_array($resultemail)) 
@@ -57,20 +79,32 @@ if (isset($_POST['m']) <> '') {
   $message = $massage;
   $headers = "From:" . $from . "\r\n";
     // $headers .= "Bcc:" . $bcc . "\r\n";
-  $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-  $mailsend = mail($to,$subject,$message, $headers);
+    // $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+    // $mailsend = mail($to,$subject,$message, $headers);
+
+
+
+  $mail->IsHTML(true);
+  $mail->CharSet = "text/html; charset=UTF-8;";
+  $mail->setFrom($from);
+  $mail->addAddress($to);
+  $mail->Subject = $subject;
+  $mail->Body = $message;
+
+  $mail->send();
+
 }
-  if ($mailsend) {
-    echo "<script>";
-    echo "alert(\"  Send Mail To Admin Success \");"; 
-    echo "window.location ='index.php';";
-    echo "</script>";
-  }else{
-    echo "<script>";
-    echo "alert(\" Error \");"; 
-    echo "window.location ='index.php';";
-    echo "</script>";
-  }
+if ($mail) {
+  echo "<script>";
+  echo "alert(\"  Send Mail To Admin Success \");"; 
+  echo "window.location ='index.php';";
+  echo "</script>";
+}else{
+  echo "<script>";
+  echo "alert(\" Error \");"; 
+  echo "window.location ='index.php';";
+  echo "</script>";
+}
 
 
 
@@ -78,7 +112,8 @@ if (isset($_POST['m']) <> '') {
 
   $massage = $_POST['massage'];
   include('../conn.php');
-  $checkemail = "SELECT Userlevel,email FROM user WHERE Userlevel = 'M' and Userlevel = 'A'";
+  include '../PHPMailer/sent.php';
+  $checkemail = "SELECT Userlevel,email FROM user WHERE Userlevel = 'M' and Userlevel = 'A' AND email <> '' ";
   $resultemail = mysqli_query($con,$checkemail);
 
   while ($row = mysqli_fetch_array($resultemail)) 
@@ -93,10 +128,22 @@ if (isset($_POST['m']) <> '') {
     $message = $massage;
     $headers = "From:" . $from . "\r\n";
     // $headers .= "Bcc:" . $bcc . "\r\n";
-    $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-    $mailsend = mail($to,$subject,$message, $headers);
+        // $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+    // $mailsend = mail($to,$subject,$message, $headers);
+
+
+
+    $mail->IsHTML(true);
+    $mail->CharSet = "text/html; charset=UTF-8;";
+    $mail->setFrom($from);
+    $mail->addAddress($to);
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+
+    $mail->send();
+
   }
-    if ($mailsend) {
+  if ($mail) {
     echo "<script>";
     echo "alert(\"  Send Mail To All User Success \");"; 
     echo "window.location ='index.php';";

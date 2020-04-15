@@ -11,6 +11,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 error_reporting( error_reporting() & ~E_NOTICE );
 date_default_timezone_set('Asia/Bangkok');
 include('conn.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
+include 'PHPMailer/sent.php';
 	//สร้างตัวแปรเก็บค่าที่รับมาจากฟอร์ม
 $Firstname = $_REQUEST["Firstname"];
 $Lastname = $_REQUEST["Lastname"];
@@ -100,10 +101,18 @@ if ($numemail > 0 ){ ?>
      $subject = "Activate user account learningroom.net";
      $message = $massage;
      $headers = "From:" . $from . "\r\n";
-     $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-     $mailsend = mail($to,$subject,$message, $headers);
+     // $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+     // $mailsend = mail($to,$subject,$message, $headers);
 
-     if($mailsend){
+     
+     $mail->IsHTML(true);
+     $mail->CharSet = "text/html; charset=UTF-8;";
+     $mail->setFrom($from);
+     $mail->addAddress($to);
+     $mail->Subject = $subject;
+     $mail->Body = $message;
+
+     if($mail->send()){
        ?>
 
        <script type="text/javascript">
