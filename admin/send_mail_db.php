@@ -1,17 +1,19 @@
 <meta charset="UTF-8" />
 
 <?php
+  include('../conn.php');
+  include '../PHPMailer/sent.php';
+
 
 if (isset($_POST['m']) <> '') { 
 
   $massage = $_POST['massage'];
-  include('../conn.php');
-  include '../PHPMailer/sent.php';
+
   $checkemail = "SELECT Userlevel,email FROM user WHERE email <> '' AND Userlevel = 'M'";
   $resultemail = mysqli_query($con,$checkemail);
   $numrow = mysqli_num_rows($resultemail);
 
-  while ($row = mysqli_fetch_array($resultemail)) 
+  do ($row = mysqli_fetch_array($resultemail)) 
   {
 
     ini_set( 'display_errors', 1 );
@@ -35,19 +37,7 @@ if (isset($_POST['m']) <> '') {
     $mail->Subject = $subject;
     $mail->Body = $message;
 
-    //$mail->send();
-
-echo "<script>";
-  echo "alert(\" $to; Send Mail To User Success\");"; 
-  //echo "window.location ='index.php';";
-  echo "</script>";
-
-
-
-    //echo "<script>";
-    //echo "alert(\" $to; Send Mail To User Success \");"; 
-    //echo "window.location ='index.php';";
-    //echo "</script>";
+    $mail->send();
 
 
   }
@@ -62,8 +52,7 @@ echo "<script>";
 }elseif (isset($_POST['a']) <> '') {
 
  $massage = $_POST['massage'];
- include('../conn.php');
- include '../PHPMailer/sent.php';
+
  $checkemail = "SELECT Userlevel,email FROM user WHERE Userlevel = 'A' AND email <> ''";
  $resultemail = mysqli_query($con,$checkemail);
 
@@ -111,8 +100,7 @@ if ($mail) {
 }elseif (isset($_POST['am']) <> '') {
 
   $massage = $_POST['massage'];
-  include('../conn.php');
-  include '../PHPMailer/sent.php';
+
   $checkemail = "SELECT Userlevel,email FROM user WHERE Userlevel = 'M' and Userlevel = 'A' AND email <> '' ";
   $resultemail = mysqli_query($con,$checkemail);
 

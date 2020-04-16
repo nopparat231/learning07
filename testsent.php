@@ -1,7 +1,5 @@
 <?php
-    ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
-    $from = "sharelea@sharelearningmedia.com";
+    $from = "test@test.com";
     $to = "23.noop@gmail.com";
     $subject = "Checking PHP mail";
     $message = "PHP mail works just fine <br>";
