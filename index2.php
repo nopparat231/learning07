@@ -55,7 +55,7 @@ $totalRows_watch = mysqli_num_rows($watch);
           <div class="card pmd-card">
             <div class="pmd-card-media">
 
-              <video id="video1" width="355" style="pointer-events: none;" >
+              <video id="video1" width="255" style="pointer-events: none;" >
                 <source src="img/<?php echo $row_choice['video']; ?>" type="video/mp4">
                   Your browser does not support HTML5 video. กรุณาเปิดใน Google Chrome
                 </video>
@@ -81,7 +81,7 @@ $totalRows_watch = mysqli_num_rows($watch);
           <div class="card pmd-card">
             <div class="pmd-card-media">
 
-              <video id="video1" width="355" style="pointer-events: none;">
+              <video id="video1" width="255" style="pointer-events: none;">
                 <source src="img/<?php echo $row_choice['video']; ?>" type="video/mp4">
                   Your browser does not support HTML5 video. กรุณาเปิดใน Google Chrome
                 </video>
@@ -109,7 +109,7 @@ $totalRows_watch = mysqli_num_rows($watch);
          <div class="card pmd-card">
           <div class="pmd-card-media">
 
-            <video id="video1" width="355" style="pointer-events: none;">
+            <video id="video1" width="255" style="pointer-events: none;">
               <source src="img/<?php echo $row_choice['video']; ?>" type="video/mp4">
                 Your browser does not support HTML5 video. กรุณาเปิดใน Google Chrome
               </video>
@@ -123,7 +123,7 @@ $totalRows_watch = mysqli_num_rows($watch);
              <p class="card-text"><h4><?php echo $row_choice['choice_detail']; ?></h4></p>
 
              <!-- Card Action -->
-             <a href="choice.php?choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&bff=bff" ><p class="btn btn-xs btn-success" >เข้าสู่บทเรียน</p></a>
+             <a href="choice.php?choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&bff=bff" ><p class="btn btn-xs btn-success" >Enter the lesson</p></a>
            </div>
          </div>
 

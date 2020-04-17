@@ -13,11 +13,9 @@ if (isset($_POST['m']) <> '') {
   $resultemail = mysqli_query($con,$checkemail);
   $numrow = mysqli_num_rows($resultemail);
 
-  do ($row = mysqli_fetch_array($resultemail)) 
+  while ($row = mysqli_fetch_array($resultemail)) 
   {
 
-    ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
     $from = "CC@learningroom.net";
     $to = $row['email'];
     
@@ -59,8 +57,7 @@ if (isset($_POST['m']) <> '') {
  while ($row = mysqli_fetch_array($resultemail)) 
  {
 
-  ini_set( 'display_errors', 1 );
-  error_reporting( E_ALL );
+
   $from = "CC@learningroom.net";
   $to = $row['email'];
 
@@ -107,8 +104,6 @@ if ($mail) {
   while ($row = mysqli_fetch_array($resultemail)) 
   {
 
-    ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
     $from = "CC@learningroom.net";
     $to = $row['email'];
     

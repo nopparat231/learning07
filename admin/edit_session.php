@@ -27,7 +27,7 @@ $totalRows_group1 = mysqli_num_rows($group1);
                <tbody>
 
                 <tr>
-                  <td>Session</td>
+                  <td>Edit Status Section</td>
                   <td style="width: 150px">
                     <input type="text" name="session_name" value="<?php echo $row_group1['g_session']; ?>" class="form-control" autocomplete="off"  required="Session Name" placeholder="Session Name"   onkeyup="validate();" minlength="3" maxlength="25">
                     <input type="hidden" name="session_id" value="<?php echo $row_group1['g_id']; ?>">

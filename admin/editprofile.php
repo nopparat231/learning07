@@ -69,7 +69,7 @@ $num = mysqli_fetch_assoc($result);
               <tr>
 
 
-                <td>Session</td>
+                <td>Edit Status Section</td>
                 <td>
 
                   <select class="custom-select" name="session" style="width: 210px">
