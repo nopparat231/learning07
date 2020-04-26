@@ -20,7 +20,8 @@ $totalRows_watch = mysqli_num_rows($watch);
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1 class="text-center"><b><?php echo $row_watch['choice_name']; ?></b></h1>
+      <br>
+      <h1 class="text-center"><b><?php echo $row_watch['choice_name']."&nbsp;".$row_watch['choice_detail']; ?></b></h1>
     </div>
   </div>
 </div>
@@ -80,7 +81,7 @@ $totalRows_watch = mysqli_num_rows($watch);
 
               <?php 
 
-              include 'choice_watch.php';
+              //include 'choice_watch.php';
 
               ?>
 

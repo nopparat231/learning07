@@ -18,7 +18,7 @@
     </div><font color="red" size="5">*</font>
   </div>
   <div class="form-group row">
-   <label for="inputpasswordh" class="col-2 col-form-label text-nowrap">Password<br></label>
+   <label for="inputpasswordh" class="col-2 col-form-label text-nowrap">Confirm Password<br></label>
    <div class="col-9">
     <input type="password" id="txtConfirmPassword" onkeyup="checkPasswordMatch();" class="form-control" id="inputpasswordh" autocomplete="off" title="รหัสผ่านต้องมี ภาษาอังกฤษตัวใหญ่ ตัวเล็ก ตัวเลข 8 ตัวขึ้นไป"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="กรุณากรอกยืนยันรหัสผ่าน" minlength="6" maxlength="25"  >
     <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>

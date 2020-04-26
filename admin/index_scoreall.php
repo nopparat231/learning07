@@ -52,7 +52,7 @@ $totalRows_learning = mysqli_num_rows($learning);
                   <?php 
 
 
-                  $query_group1 = "SELECT * FROM choice";
+                  $query_group1 = "SELECT * FROM choice limit 3";
                   $group1 = mysqli_query($con,$query_group1) or die(mysqli_error());
                   $row_group1 = mysqli_fetch_assoc($group1);
                   $totalRows_group1 = mysqli_num_rows($group1);

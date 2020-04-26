@@ -7,7 +7,7 @@
 
 
   $email = $_POST['email'];
-
+  include 'PHPMailer/sent.php';
   include('conn.php');
   $checkemail = "SELECT * FROM user WHERE email = '$email'";
   $resultemail = mysqli_query($con,$checkemail);
@@ -17,17 +17,26 @@
   if ($numemail > 0 ){
 
 
-     ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
-    $from = "service@education.com";
-    $to = $email;
-    $subject = "Resetpassword learningroom.net";
-    $message = $massage;
-    $headers = "From:" . $from . "\r\n";
-    $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-    $mailsend = mail($to,$subject,$message, $headers);
+   ini_set( 'display_errors', 1 );
+   error_reporting( E_ALL );
+   $from = "service@education.com";
+   $to = $email;
+   $subject = "Resetpassword learningroom.net";
+   $message = $massage;
+   $headers = "From:" . $from . "\r\n";
+   $headers .= "Content-Type: text/html; charset=utf-8\r\n";
+   
 
-    if($mailsend){
+   
+   $mail->IsHTML(true);
+   $mail->CharSet = "text/html; charset=UTF-8;";
+   $mail->setFrom($from);
+   $mail->addAddress($to);
+   $mail->Subject = $subject;
+   $mail->Body = $message;
+   
+
+   if($mail->send()){
      ?>
 
      <script type="text/javascript">

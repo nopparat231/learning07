@@ -199,7 +199,7 @@ $resultN=mysqli_fetch_array($db_queryN);
     <div class="row">
       <div class="col-md-12 text-center">
         <?php if (isset($_REQUEST['af'])) { ?>
-         <a href="score.php?user_id=<?php echo $user_id ?>" class="btn btn-info" type="button" >Scall All</a>
+         <a href="score.php?user_id=<?php echo $user_id ?>" class="btn btn-info" type="button" >Score All</a>
        <?php }else{ ?>
          <button class="btn btn-xs btn-danger buttonn" id="btn1" >Sent</button>
 
@@ -277,7 +277,7 @@ function bf(){
 
       type: "success",
 
-      confirmButtonText: "Whatching lession"
+      confirmButtonText: "Watching lesson"
       },
       function(isConfirm){
         if (isConfirm) {

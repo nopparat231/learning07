@@ -82,7 +82,7 @@
                     <td></td>
                     <td>Password</td>
                     <td>
-                      <input type="password" name="Password" class="form-control" required  value="<?php echo($num['Password'])?>">
+                      <input type="password" name="Password" onkeyup="checkPasswordMatch();" id="txtNewPassword" class="form-control" required  value="<?php echo($num['Password'])?>">
                     </td>
                   </tr>
                   <input type="hidden" name="id" value="<?php echo($num['ID'])?>">
@@ -113,8 +113,12 @@
                       </select>
                     </td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>Confirm Password</td>
+                    <td>
+                      <input type="password" name="cPassword" id="txtConfirmPassword" class="form-control" required  value="<?php echo($num['Password'])?>">
+                       <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
+                    </td>
+
                   </tr>
 
 

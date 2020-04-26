@@ -38,10 +38,12 @@ $totalRows_choice = mysqli_num_rows($choice);
         </div>
         <div class="card-body">
          <!-- Card Title -->
-         <h2 class="card-title"><?php echo $row_choice['choice_name']; ?></h2>
+         <div class="card-title" style="text-align: left;">
+           <h4 ><?php echo $row_choice['choice_name']."&nbsp;".$row_choice['choice_detail']; ?></h4>
+         </div>
 
          <!-- Card Text -->
-         <p class="card-text"><h4><?php echo $row_choice['choice_detail']; ?></h4></p>
+         <p class="card-text"><h4><?php //echo $row_choice['choice_detail']; ?></h4></p>
 
          <!-- Card Action -->
          <a href="index.php?ec&choice_id=<?php echo $row_choice['choice_id'];?>&user_id=<?php echo $_SESSION['UserID'];?>&aff=aff"><p class="btn btn-xs btn-warning" >Edit Lesson</p></a>

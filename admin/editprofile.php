@@ -62,7 +62,7 @@ $num = mysqli_fetch_assoc($result);
                 <td></td>
                 <td>Password</td>
                 <td>
-                  <input type="password" name="Password" class="form-control" required  value="<?php echo($num['Password'])?>">
+                  <input type="text" name="Password" class="form-control" required  value="<?php echo($num['Password'])?>">
                 </td>
               </tr>
               <input type="hidden" name="id" value="<?php echo($num['ID'])?>">
